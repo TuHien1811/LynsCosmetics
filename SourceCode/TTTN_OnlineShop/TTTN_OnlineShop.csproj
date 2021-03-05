@@ -45,6 +45,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -119,7 +125,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BUS\ShopOnlineBUS.cs" />
+    <Compile Include="Models\Generated\Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\User\css\animate.css" />
@@ -517,6 +535,7 @@
     <Content Include="Assets\User\img\instagram\3.jpg" />
     <Content Include="Assets\User\img\instagram\4.jpg" />
     <Content Include="Assets\User\img\instagram\5.jpg" />
+    <Content Include="Assets\User\img\logo\54be9684-4d16-4cdb-81f8-bad8bc44fb7d_200x200.png" />
     <Content Include="Assets\User\img\logo\logo.png" />
     <Content Include="Assets\User\img\logo\logo2.png" />
     <Content Include="Assets\User\img\logo\logo3.png" />
@@ -565,295 +584,32 @@
     <Content Include="Assets\User\img\products\autopart\7.jpg" />
     <Content Include="Assets\User\img\products\autopart\8.jpg" />
     <Content Include="Assets\User\img\products\autopart\9.jpg" />
-    <Content Include="Assets\User\img\products\barber\1.jpg" />
-    <Content Include="Assets\User\img\products\barber\10.jpg" />
-    <Content Include="Assets\User\img\products\barber\11.jpg" />
-    <Content Include="Assets\User\img\products\barber\12.jpg" />
-    <Content Include="Assets\User\img\products\barber\13.jpg" />
-    <Content Include="Assets\User\img\products\barber\14.jpg" />
-    <Content Include="Assets\User\img\products\barber\15.jpg" />
-    <Content Include="Assets\User\img\products\barber\16.jpg" />
-    <Content Include="Assets\User\img\products\barber\2.jpg" />
-    <Content Include="Assets\User\img\products\barber\3.jpg" />
-    <Content Include="Assets\User\img\products\barber\4.jpg" />
-    <Content Include="Assets\User\img\products\barber\5.jpg" />
-    <Content Include="Assets\User\img\products\barber\6.jpg" />
-    <Content Include="Assets\User\img\products\barber\7.jpg" />
-    <Content Include="Assets\User\img\products\barber\8.jpg" />
-    <Content Include="Assets\User\img\products\barber\9.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\1.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\10.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\11.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\12.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\13.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\14.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\15.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\16.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\17.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\2.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\3.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\4.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\5.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\6.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\7.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\8.jpg" />
-    <Content Include="Assets\User\img\products\bicycle\9.jpg" />
-    <Content Include="Assets\User\img\products\book\1.jpg" />
-    <Content Include="Assets\User\img\products\book\10.jpg" />
-    <Content Include="Assets\User\img\products\book\11.jpg" />
-    <Content Include="Assets\User\img\products\book\12.jpg" />
-    <Content Include="Assets\User\img\products\book\13.jpg" />
-    <Content Include="Assets\User\img\products\book\14.jpg" />
-    <Content Include="Assets\User\img\products\book\15.jpg" />
-    <Content Include="Assets\User\img\products\book\16.jpg" />
-    <Content Include="Assets\User\img\products\book\17.jpg" />
-    <Content Include="Assets\User\img\products\book\18.jpg" />
-    <Content Include="Assets\User\img\products\book\2.jpg" />
-    <Content Include="Assets\User\img\products\book\3.jpg" />
-    <Content Include="Assets\User\img\products\book\4.jpg" />
-    <Content Include="Assets\User\img\products\book\5.jpg" />
-    <Content Include="Assets\User\img\products\book\6.jpg" />
-    <Content Include="Assets\User\img\products\book\7.jpg" />
-    <Content Include="Assets\User\img\products\book\8.jpg" />
-    <Content Include="Assets\User\img\products\book\9.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\1.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\10.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\11.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\12.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\13.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\2.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\3.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\4.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\5.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\6.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\7.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\8.jpg" />
-    <Content Include="Assets\User\img\products\cosmetic\9.jpg" />
-    <Content Include="Assets\User\img\products\digital\1.jpg" />
-    <Content Include="Assets\User\img\products\digital\10.jpg" />
-    <Content Include="Assets\User\img\products\digital\11.jpg" />
-    <Content Include="Assets\User\img\products\digital\12.jpg" />
-    <Content Include="Assets\User\img\products\digital\13.jpg" />
-    <Content Include="Assets\User\img\products\digital\14.jpg" />
-    <Content Include="Assets\User\img\products\digital\15.jpg" />
-    <Content Include="Assets\User\img\products\digital\2.jpg" />
-    <Content Include="Assets\User\img\products\digital\3.jpg" />
-    <Content Include="Assets\User\img\products\digital\4.jpg" />
-    <Content Include="Assets\User\img\products\digital\5.jpg" />
-    <Content Include="Assets\User\img\products\digital\6.jpg" />
-    <Content Include="Assets\User\img\products\digital\7.jpg" />
-    <Content Include="Assets\User\img\products\digital\8.jpg" />
-    <Content Include="Assets\User\img\products\digital\9.jpg" />
-    <Content Include="Assets\User\img\products\digital\best-seller.jpg" />
-    <Content Include="Assets\User\img\products\fashion\1.jpg" />
-    <Content Include="Assets\User\img\products\fashion\10.jpg" />
-    <Content Include="Assets\User\img\products\fashion\11.jpg" />
-    <Content Include="Assets\User\img\products\fashion\12.jpg" />
-    <Content Include="Assets\User\img\products\fashion\13.jpg" />
-    <Content Include="Assets\User\img\products\fashion\14.jpg" />
-    <Content Include="Assets\User\img\products\fashion\15.jpg" />
-    <Content Include="Assets\User\img\products\fashion\16.jpg" />
-    <Content Include="Assets\User\img\products\fashion\2.jpg" />
-    <Content Include="Assets\User\img\products\fashion\3.jpg" />
-    <Content Include="Assets\User\img\products\fashion\4.jpg" />
-    <Content Include="Assets\User\img\products\fashion\5.jpg" />
-    <Content Include="Assets\User\img\products\fashion\6.jpg" />
-    <Content Include="Assets\User\img\products\fashion\7.jpg" />
-    <Content Include="Assets\User\img\products\fashion\8.jpg" />
-    <Content Include="Assets\User\img\products\fashion\9.jpg" />
-    <Content Include="Assets\User\img\products\flower\1.jpg" />
-    <Content Include="Assets\User\img\products\flower\10.jpg" />
-    <Content Include="Assets\User\img\products\flower\11.jpg" />
-    <Content Include="Assets\User\img\products\flower\12.jpg" />
-    <Content Include="Assets\User\img\products\flower\13.jpg" />
-    <Content Include="Assets\User\img\products\flower\14.jpg" />
-    <Content Include="Assets\User\img\products\flower\15.jpg" />
-    <Content Include="Assets\User\img\products\flower\16.jpg" />
-    <Content Include="Assets\User\img\products\flower\17.jpg" />
-    <Content Include="Assets\User\img\products\flower\2.jpg" />
-    <Content Include="Assets\User\img\products\flower\3.jpg" />
-    <Content Include="Assets\User\img\products\flower\4.jpg" />
-    <Content Include="Assets\User\img\products\flower\5.jpg" />
-    <Content Include="Assets\User\img\products\flower\6.jpg" />
-    <Content Include="Assets\User\img\products\flower\7.jpg" />
-    <Content Include="Assets\User\img\products\flower\8.jpg" />
-    <Content Include="Assets\User\img\products\flower\9.jpg" />
-    <Content Include="Assets\User\img\products\food\1.jpg" />
-    <Content Include="Assets\User\img\products\food\10.jpg" />
-    <Content Include="Assets\User\img\products\food\11.jpg" />
-    <Content Include="Assets\User\img\products\food\12.jpg" />
-    <Content Include="Assets\User\img\products\food\13.jpg" />
-    <Content Include="Assets\User\img\products\food\14.jpg" />
-    <Content Include="Assets\User\img\products\food\15.jpg" />
-    <Content Include="Assets\User\img\products\food\2.jpg" />
-    <Content Include="Assets\User\img\products\food\3.jpg" />
-    <Content Include="Assets\User\img\products\food\4.jpg" />
-    <Content Include="Assets\User\img\products\food\5.jpg" />
-    <Content Include="Assets\User\img\products\food\6.jpg" />
-    <Content Include="Assets\User\img\products\food\7.jpg" />
-    <Content Include="Assets\User\img\products\food\8.jpg" />
-    <Content Include="Assets\User\img\products\food\9.jpg" />
-    <Content Include="Assets\User\img\products\furniture\1.jpg" />
-    <Content Include="Assets\User\img\products\furniture\10.jpg" />
-    <Content Include="Assets\User\img\products\furniture\11.jpg" />
-    <Content Include="Assets\User\img\products\furniture\12.jpg" />
-    <Content Include="Assets\User\img\products\furniture\13.jpg" />
-    <Content Include="Assets\User\img\products\furniture\14.jpg" />
-    <Content Include="Assets\User\img\products\furniture\15.jpg" />
-    <Content Include="Assets\User\img\products\furniture\2.jpg" />
-    <Content Include="Assets\User\img\products\furniture\3.jpg" />
-    <Content Include="Assets\User\img\products\furniture\4.jpg" />
-    <Content Include="Assets\User\img\products\furniture\5.jpg" />
-    <Content Include="Assets\User\img\products\furniture\6.jpg" />
-    <Content Include="Assets\User\img\products\furniture\7.jpg" />
-    <Content Include="Assets\User\img\products\furniture\8.jpg" />
-    <Content Include="Assets\User\img\products\furniture\9.jpg" />
-    <Content Include="Assets\User\img\products\furniture\best-seller.jpg" />
-    <Content Include="Assets\User\img\products\handmade\1.jpg" />
-    <Content Include="Assets\User\img\products\handmade\10.jpg" />
-    <Content Include="Assets\User\img\products\handmade\11.jpg" />
-    <Content Include="Assets\User\img\products\handmade\12.jpg" />
-    <Content Include="Assets\User\img\products\handmade\13.jpg" />
-    <Content Include="Assets\User\img\products\handmade\14.jpg" />
-    <Content Include="Assets\User\img\products\handmade\15.jpg" />
-    <Content Include="Assets\User\img\products\handmade\2.jpg" />
-    <Content Include="Assets\User\img\products\handmade\3.jpg" />
-    <Content Include="Assets\User\img\products\handmade\4.jpg" />
-    <Content Include="Assets\User\img\products\handmade\5.jpg" />
-    <Content Include="Assets\User\img\products\handmade\6.jpg" />
-    <Content Include="Assets\User\img\products\handmade\7.jpg" />
-    <Content Include="Assets\User\img\products\handmade\8.jpg" />
-    <Content Include="Assets\User\img\products\handmade\9.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\1.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\10.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\11.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\2.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\3.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\4.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\5.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\6.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\7.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\8.jpg" />
-    <Content Include="Assets\User\img\products\jewelry\9.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\1.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\10.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\11.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\12.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\13.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\14.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\15.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\16.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\17.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\18.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\19.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\2.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\20.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\3.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\4.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\5.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\6.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\7.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\8.jpg" />
-    <Content Include="Assets\User\img\products\kitchenware\9.jpg" />
-    <Content Include="Assets\User\img\products\organic\1.jpg" />
-    <Content Include="Assets\User\img\products\organic\10.jpg" />
-    <Content Include="Assets\User\img\products\organic\11.jpg" />
-    <Content Include="Assets\User\img\products\organic\12.jpg" />
-    <Content Include="Assets\User\img\products\organic\13.jpg" />
-    <Content Include="Assets\User\img\products\organic\14.jpg" />
-    <Content Include="Assets\User\img\products\organic\15.jpg" />
-    <Content Include="Assets\User\img\products\organic\16.jpg" />
-    <Content Include="Assets\User\img\products\organic\17.jpg" />
-    <Content Include="Assets\User\img\products\organic\18.jpg" />
-    <Content Include="Assets\User\img\products\organic\2.jpg" />
-    <Content Include="Assets\User\img\products\organic\3.jpg" />
-    <Content Include="Assets\User\img\products\organic\4.jpg" />
-    <Content Include="Assets\User\img\products\organic\5.jpg" />
-    <Content Include="Assets\User\img\products\organic\6.jpg" />
-    <Content Include="Assets\User\img\products\organic\7.jpg" />
-    <Content Include="Assets\User\img\products\organic\8.jpg" />
-    <Content Include="Assets\User\img\products\organic\9.jpg" />
-    <Content Include="Assets\User\img\products\pet\1.jpg" />
-    <Content Include="Assets\User\img\products\pet\10.jpg" />
-    <Content Include="Assets\User\img\products\pet\11.jpg" />
-    <Content Include="Assets\User\img\products\pet\12.jpg" />
-    <Content Include="Assets\User\img\products\pet\13.jpg" />
-    <Content Include="Assets\User\img\products\pet\14.jpg" />
-    <Content Include="Assets\User\img\products\pet\15.jpg" />
-    <Content Include="Assets\User\img\products\pet\16.jpg" />
-    <Content Include="Assets\User\img\products\pet\17.jpg" />
-    <Content Include="Assets\User\img\products\pet\18.jpg" />
-    <Content Include="Assets\User\img\products\pet\2.jpg" />
-    <Content Include="Assets\User\img\products\pet\3.jpg" />
-    <Content Include="Assets\User\img\products\pet\4.jpg" />
-    <Content Include="Assets\User\img\products\pet\5.jpg" />
-    <Content Include="Assets\User\img\products\pet\6.jpg" />
-    <Content Include="Assets\User\img\products\pet\7.jpg" />
-    <Content Include="Assets\User\img\products\pet\8.jpg" />
-    <Content Include="Assets\User\img\products\pet\9.jpg" />
-    <Content Include="Assets\User\img\products\plant\1.jpg" />
-    <Content Include="Assets\User\img\products\plant\10.jpg" />
-    <Content Include="Assets\User\img\products\plant\11.jpg" />
-    <Content Include="Assets\User\img\products\plant\2.jpg" />
-    <Content Include="Assets\User\img\products\plant\3.jpg" />
-    <Content Include="Assets\User\img\products\plant\4.jpg" />
-    <Content Include="Assets\User\img\products\plant\5.jpg" />
-    <Content Include="Assets\User\img\products\plant\6.jpg" />
-    <Content Include="Assets\User\img\products\plant\7.jpg" />
-    <Content Include="Assets\User\img\products\plant\8.jpg" />
-    <Content Include="Assets\User\img\products\plant\9.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\1.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\10.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\11.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\12.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\13.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\14.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\15.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\16.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\17.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\2.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\3.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\4.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\5.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\6.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\7.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\8.jpg" />
-    <Content Include="Assets\User\img\products\sportwear\9.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\1.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\10.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\11.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\12.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\13.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\14.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\15.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\16.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\17.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\18.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\19.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\2.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\20.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\3.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\4.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\5.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\6.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\7.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\8.jpg" />
-    <Content Include="Assets\User\img\products\supermarket\9.jpg" />
-    <Content Include="Assets\User\img\products\toy\1.jpg" />
-    <Content Include="Assets\User\img\products\toy\10.jpg" />
-    <Content Include="Assets\User\img\products\toy\11.jpg" />
-    <Content Include="Assets\User\img\products\toy\12.jpg" />
-    <Content Include="Assets\User\img\products\toy\13.jpg" />
-    <Content Include="Assets\User\img\products\toy\14.jpg" />
-    <Content Include="Assets\User\img\products\toy\15.jpg" />
-    <Content Include="Assets\User\img\products\toy\2.jpg" />
-    <Content Include="Assets\User\img\products\toy\3.jpg" />
-    <Content Include="Assets\User\img\products\toy\4.jpg" />
-    <Content Include="Assets\User\img\products\toy\5.jpg" />
-    <Content Include="Assets\User\img\products\toy\6.jpg" />
-    <Content Include="Assets\User\img\products\toy\7.jpg" />
-    <Content Include="Assets\User\img\products\toy\8.jpg" />
-    <Content Include="Assets\User\img\products\toy\9.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\hadalabo_toner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\User\img\products\cosmetic\urbandecay1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\User\img\products\cosmetic\urbandecay2.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\urbandecay3.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\soncollagen.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\14.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\15.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\16.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\17.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\18.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\19.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\sulwhasoo_toner.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\20.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\kcnloreal.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\kcnobagi.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\srmhadalabo.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\srmgao.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\srmtea.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\srmhoacuc.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\srmcetaphil.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\d.jpg" />
+    <Content Include="Assets\User\img\products\cosmetic\â.jpg" />
     <Content Include="Assets\User\img\service\1.jpg" />
     <Content Include="Assets\User\img\service\2.jpg" />
     <Content Include="Assets\User\img\service\3.jpg" />
@@ -1110,10 +866,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Generated\Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Assets\User\fonts\fontawesome-webfont3e6e.eot" />
@@ -1125,6 +886,12 @@
     <Content Include="Assets\User\fonts\Pe-icon-7-strokebb1d.ttf" />
     <Content Include="Assets\User\fonts\Pe-icon-7-strokebb1d.woff" />
     <Content Include="Assets\User\fonts\Pe-icon-7-stroked41d.eot" />
+    <Content Include="Models\Generated\PetaPoco.Generator.ttinclude" />
+    <Content Include="Models\Generated\PetaPoco.Core.ttinclude" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -1150,7 +917,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1162,6 +928,9 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

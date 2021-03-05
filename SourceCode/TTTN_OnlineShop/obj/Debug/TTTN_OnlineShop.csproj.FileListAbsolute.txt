@@ -26,3 +26,37 @@ E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\SourceCode\TTTN_OnlineShop
 E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CopyComplete
 E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.dll
 E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.pdb
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll.config
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\TTTN_OnlineShop.pdb
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\Antlr3.Runtime.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\Newtonsoft.Json.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.Helpers.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.Mvc.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.Optimization.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.Razor.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.Razor.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\WebGrease.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.Helpers.xml
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.Mvc.xml
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.Optimization.xml
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.Razor.xml
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.xml
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.Razor.xml
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\Newtonsoft.Json.xml
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\Antlr3.Runtime.pdb
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csprojAssemblyReference.cache
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CoreCompileInputs.cache
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CopyComplete
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.pdb
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\Assets\User\img\products\cosmetic\hadalabo_toner.jpg
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\Assets\User\img\products\cosmetic\urbandecay1.jpg
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\PagedList.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\PagedList.Mvc.dll
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\PagedList.xml
+C:\Users\shiro\OneDrive\Máy tính\Clone\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\PagedList.Mvc.xml

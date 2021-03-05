@@ -1,23 +1,27 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TTTN_OnlineShop.Models.BUS;
 
 namespace TTTN_OnlineShop.Controllers
 {
     public class ShopController : Controller
     {
         // GET: Shop
-        public ActionResult Index()
+        public ActionResult Index(int page =1, int pagesize = 12)
         {
-            return View();
+            var db = ShopOnlineBUS.Danhsach().ToPagedList(page, pagesize);
+            return View(db);
         }
 
         // GET: Shop/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var db = ShopOnlineBUS.ChiTiet(id);
+            return View(db);
         }
 
         // GET: Shop/Create
