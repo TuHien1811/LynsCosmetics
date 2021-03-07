@@ -211,6 +211,12 @@ namespace LynsCosmetics_Connection
 
 
 
+
+
+		[Column] public string TinhTrangDM { get; set; }
+
+
+
 	}
 
     
@@ -309,10 +315,17 @@ namespace LynsCosmetics_Connection
 
 
 
-		[Column] public string HinhNho4 { get; set; }
+		[Column] public string GhiChu { get; set; }
 
-        
-    }
+
+
+
+
+		[Column] public string GioiThieu { get; set; }
+
+
+
+	}
 
     
 
@@ -339,6 +352,12 @@ namespace LynsCosmetics_Connection
 
 
 		[Column] public string TenThuongHieu { get; set; }
+
+
+
+
+
+		[Column] public string TinhTrangTH { get; set; }
 
 
 

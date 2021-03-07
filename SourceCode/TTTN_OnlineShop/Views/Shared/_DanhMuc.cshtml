@@ -1,0 +1,21 @@
+﻿@model IEnumerable<LynsCosmetics_Connection.Table_DanhMuc>
+<li>
+    <a class="drop-icon" href="shop.html">Category</a>
+    <!--  Mega-Menu Start -->
+    <ul class="ht-dropdown megamenu megamenu-three ">
+        <!-- Single Column Start -->
+        <li>
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a href="@Url.Action("Index","DanhMuc",new { id=item.MaDanhMuc})">@item.TenDanhMuc</a>
+                    </li>
+                }
+            </ul>
+        </li>
+        <!-- Single Column End -->
+        
+    </ul>
+    <!-- Mega-Menu End -->
+</li>

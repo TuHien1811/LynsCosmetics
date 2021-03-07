@@ -20,5 +20,15 @@ namespace TTTN_OnlineShop.Models.BUS
             return db.SingleOrDefault<Table_SanPham> ("select * from Table_SanPham where MaSanPham = @0",a);
         }
 
+        public static IEnumerable<Table_SanPham> NewArrivalProducts()
+        {
+            var db = new LynsCosmetics_ConnectionDB();
+            return db.Query<Table_SanPham>("select * from Table_SanPham where GhiChu = N'new'");
+        }
+        public static IEnumerable<Table_SanPham> RelatedProducts(int catogeryCode, int brandCode, int productCode)
+        {
+            var db = new LynsCosmetics_ConnectionDB();
+            return db.Query<Table_SanPham>("select * from Table_SanPham where MaDanhMuc = " + catogeryCode + "and MaThuongHieu = " + brandCode+ "and MaSanPham != " +productCode);
+        }
     }
 }

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<LynsCosmetics_Connection.Table_SanPham>
+
+<div class="new-arrival no-border-style ptb-90">
+    <div class="container">
+        <!-- Section Title Start -->
+        <div class="section-title text-center">
+            <h2>Related Products</h2>
+            <p>Add our new arrivals to your weekly lineup</p>
+        </div>
+        <!-- Section Title End -->
+        <div class="our-pro-active owl-carousel">
+            <!-- Single Product Start Here -->
+            @foreach (var item in Model)
+            {
+                <div class="single-makal-product">
+                    <div class="pro-img">
+                        <a href="@Url.Action("Details","Shop",new {id = item.MaSanPham})">
+                            <img src="~/Assets/User/img/products/cosmetic/@item.HinhMinhHoa" alt="product-img">
+                        </a>
+                        <span class="sticker-new">new</span>
+                        <div class="quick-view-pro">
+                            <a data-toggle="modal" data-target="#product-window" class="quick-view" href="#"></a>
+                        </div>
+                    </div>
+                    <div class="pro-content">
+                        <h4 class="pro-title">
+                            <a href="@Url.Action("Details","Shop",new {id = item.MaSanPham})">@item.TenSanPham</a>
+                        </h4>
+                        <p>
+                            <span class="price">@item.GiaBan.ToString("#,##,00") VNĐ</span>
+                        </p>
+                        <div class="pro-actions">
+                            <div class="actions-primary">
+                                <a href="cart.html" class="add-to-cart" data-toggle="tooltip" data-original-title="Add to Cart">Add To Cart</a>
+                            </div>
+                            <div class="actions-secondary">
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+            <!-- Single Product End Here -->
+
+        </div>
+    </div>
+</div>

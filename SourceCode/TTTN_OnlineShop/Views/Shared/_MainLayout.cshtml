@@ -47,439 +47,203 @@
 
         <!-- Main Header Area Start Here -->
         <!-- Main Header Area Three Start Here -->
-        <header class="header-style-five">
-            <!-- Header Top Start Here -->
-            <div class="header-top">
+        @*do du lieu theo kieu html.partial sau do chuyen ve mvchtmlString*@
+        @{
+            var headerPartial = Html.Partial("_Header");
+            headerPartial = new MvcHtmlString(headerPartial.ToString());
+        }
+        @headerPartial
+        <!-- Header Middle Start Here -->
+        <div class="header-middle stick header-sticky">
+            <div class="header-middle_nav position-relative">
                 <div class="container">
-                    <div class="col-sm-12">
-                        <div class="row justify-content-lg-between justify-content-center">
-                            <!-- Header Top Left Start -->
-                            <div class="header-top-left order-2 order-lg-1">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fa fa-phone"></i> 0977359131</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-envelope-open-o"></i> lethimailinhhup@gmail.com</a>
-                                    </li>
-                                    <li>
-                                        <ul class="social-icon">
-                                            <li>
-                                                <a href="https://www.facebook.com/LeeLynSkinCareForBetterLife/">
-                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                    <div class="row align-items-center">
+                        <!-- Logo Start -->
+                        <div class="col-xl-3 col-lg-2 col-6">
+                            <div class="logo">
+                                <a href="index-cosmetic.html">
+                                    @*<img src="~/Assets/User/img/logo/logo.png" alt="logo-image">*@
+                                    <h3>Lyn's Cosmetics</h3>
+                                </a>
                             </div>
-                            <!-- Header Top Left End -->
-                            <!-- Header Top Right Start -->
-                            <div class="header-top-right order-1 order-lg-2">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            USD $
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <!-- Dropdown Start -->
-                                        <ul class="ht-dropdown">
-                                            <li>
-                                                <a href="#">EUR €</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">USD $</a>
-                                            </li>
-                                        </ul>
-                                        <!-- Dropdown End -->
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="~/Assets/User/img/header/1.jpg" alt="language-selector">English
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <!-- Dropdown Start -->
-                                        <ul class="ht-dropdown">
-                                            <li>
-                                                <a href="#">
-                                                    <img src="~/Assets/User/img/header/1.jpg" alt="language-selector">English
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <img src="~/Assets/User/img/header/2.jpg" alt="language-selector">Francis
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <!-- Dropdown End -->
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Setting
-                                            <i class="fa fa-angle-down"></i>
-                                        </a>
-                                        <!-- Dropdown Start -->
-                                        <ul class="ht-dropdown">
-                                            <li>
-                                                <a href="cart.html">My orders</a>
-                                            </li>
-                                            <li>
-                                                <a href="account.html">My account</a>
-                                            </li>
-                                            <li>
-                                                <a href="wishlist.html">My wishlist</a>
-                                            </li>
-                                            <li>
-                                                <a href="login.html">Sign in</a>
-                                            </li>
-                                        </ul>
-                                        <!-- Dropdown End -->
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Header Top Right End -->
                         </div>
+                        <!-- Logo End -->
+                        <!-- Menu Area Start Here -->
+                        <div class="col-xl-7 col-lg-8 d-none d-lg-block position-static">
+                            <nav>
+                                <ul class="header-bottom-list d-flex justify-content-start">
+                                    <li>
+                                        @Html.ActionLink("Home", "Index", "Home")
+
+                                    </li>
+                                    @Html.Partial("_ThuongHieu", TTTN_OnlineShop.Models.BUS.ThuongHieuBUS.Danhsach())
+                                    @Html.Partial("_DanhMuc", TTTN_OnlineShop.Models.BUS.DanhMucBUS.Danhsach())
+                                    <li>
+                                        <a class="drop-icon" href="shop.html">shop</a>
+                                        <!-- Home Version Dropdown Start -->
+                                        <ul class="ht-dropdown">
+                                            <li>
+                                                @Html.ActionLink("Products", "Index", "Shop")
+                                            </li>
+                                            <li>
+                                                <a href="cart.html">cart</a>
+                                            </li>
+                                            <li>
+                                                <a href="wishlist.html">wishlist</a>
+                                            </li>
+                                        </ul>
+                                        <!-- Home Version Dropdown End -->
+                                    </li>
+                                    <li>
+                                        <a class="drop-icon" href="blog.html">blog</a>
+                                        <!-- Home Version Dropdown Start -->
+                                        <ul class="ht-dropdown blog-dropdown">
+                                            <li>
+                                                <a href="blog-details.html">Blog Details</a>
+                                            </li>
+                                        </ul>
+                                        <!-- Home Version Dropdown End -->
+                                    </li>
+                                    <li>
+                                        <a class="drop-icon" href="#">pages</a>
+                                        <!-- Home Version Dropdown Start -->
+                                        <ul class="ht-dropdown">
+                                            <li>
+                                                <a href="contact.html">contact us</a>
+                                            </li>
+                                            <li>
+                                                <a href="about.html">about us</a>
+                                            </li>
+                                            <li>
+                                                <a href="register.html">register</a>
+                                            </li>
+                                            <li>
+                                                <a href="login.html">Login</a>
+                                            </li>
+                                            <li>
+                                                <a href="404.html">404</a>
+                                            </li>
+                                            <li>
+                                                <a href="forgot-password.html">forgot password</a>
+                                            </li>
+                                        </ul>
+                                        <!-- Home Version Dropdown End -->
+                                    </li>
+                                    <li>
+                                        <a href="cart.html">Kiểm tra đơn hàng</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Menu Area End Here -->
+                        <!-- Cart Box Start Here -->
+                        <div class="col-xl-2 col-lg-2 col-6">
+                            <div class="cart-box">
+                                <ul>
+                                    <!-- Search Box Start Here -->
+                                    <li>
+                                        <a href="#">
+                                            <span class="pe-7s-search"></span>
+                                        </a>
+                                        <div class="categorie-search-box ht-dropdown">
+                                            <form action="#">
+                                                <input type="text" name="search" placeholder="Search our catalog">
+                                                <button>
+                                                    <span class="pe-7s-search"></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </li>
+                                    <!-- Categorie Search Box End Here -->
+                                    <li>
+                                        <a href="#">
+                                            <span class="pe-7s-shopbag"></span>
+                                            <span class="total-pro">2</span>
+                                        </a>
+                                        <ul class="ht-dropdown cart-box-width">
+                                            <li>
+                                                <!-- Cart Box Start -->
+                                                <div class="single-cart-box">
+                                                    <div class="cart-img">
+                                                        <a href="#">
+                                                            <img src="~/Assets/User/img/products/cosmetic/1.jpg" alt="cart-image">
+                                                        </a>
+                                                        <span class="pro-quantity">1X</span>
+                                                    </div>
+                                                    <div class="cart-content">
+                                                        <h6>
+                                                            <a href="cart.html">Modern Eye Brush </a>
+                                                        </h6>
+                                                        <span class="cart-price">27.45</span>
+                                                        <span>Size: S</span>
+                                                        <span>Color: Yellow</span>
+                                                    </div>
+                                                    <a class="del-icone" href="#">
+                                                        <i class="ion-close"></i>
+                                                    </a>
+                                                </div>
+                                                <!-- Cart Box End -->
+                                                <!-- Cart Box Start -->
+                                                <div class="single-cart-box">
+                                                    <div class="cart-img">
+                                                        <a href="#">
+                                                            <img src="~/Assets/User/img/products/cosmetic/2.jpg" alt="cart-image">
+                                                        </a>
+                                                        <span class="pro-quantity">1X</span>
+                                                    </div>
+                                                    <div class="cart-content">
+                                                        <h6>
+                                                            <a href="cart.html">Flat Velvet Lipstick</a>
+                                                        </h6>
+                                                        <span class="cart-price">45.00</span>
+                                                        <span>Size: XL</span>
+                                                        <span>Color: Green</span>
+                                                    </div>
+                                                    <a class="del-icone" href="#">
+                                                        <i class="ion-close"></i>
+                                                    </a>
+                                                </div>
+                                                <!-- Cart Box End -->
+                                                <!-- Cart Footer Inner Start -->
+                                                <div class="cart-footer">
+                                                    <ul class="price-content">
+                                                        <li>
+                                                            Subtotal
+                                                            <span>$57.95</span>
+                                                        </li>
+                                                        <li>
+                                                            Shipping
+                                                            <span>$7.00</span>
+                                                        </li>
+                                                        <li>
+                                                            Taxes
+                                                            <span>$0.00</span>
+                                                        </li>
+                                                        <li>
+                                                            Total
+                                                            <span>$64.95</span>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="cart-actions text-center">
+                                                        <a class="cart-checkout" href="checkout.html">Checkout</a>
+                                                    </div>
+                                                </div>
+                                                <!-- Cart Footer Inner End -->
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Cart Box End Here -->
                     </div>
+                    <!-- Row End -->
+
                 </div>
                 <!-- Container End -->
             </div>
-            <!-- Header Top End Here -->
-            <!-- Header Middle Start Here -->
-            <div class="header-middle stick header-sticky">
-                <div class="header-middle_nav position-relative">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <!-- Logo Start -->
-                            <div class="col-xl-3 col-lg-2 col-6">
-                                <div class="logo">
-                                    <a href="index-cosmetic.html">
-                                        @*<img src="~/Assets/User/img/logo/logo.png" alt="logo-image">*@
-                                        <h3>Lyn's Cosmetics</h3>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Logo End -->
-                            <!-- Menu Area Start Here -->
-                            <div class="col-xl-7 col-lg-8 d-none d-lg-block position-static">
-                                <nav>
-                                    <ul class="header-bottom-list d-flex justify-content-start">
-                                        <li>
-                                            @Html.ActionLink("Home", "Index", "Home")
-
-                                        </li>
-                                        <li>
-                                            <a class="drop-icon" href="shop.html">Brand</a>
-                                            <!--  Mega-Menu Start -->
-                                            <ul class="ht-dropdown megamenu megamenu-three ">
-                                                <!-- Single Column Start -->
-                                                <li>
-                                                    <ul>
-                                                        <li class="menu-title">Earrings</li>
-                                                        <li>
-                                                            <a href="shop.html">Document</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Dropcap</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Dummy Image</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Dummy Text</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Fancy Text</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <!-- Single Column End -->
-                                                <!-- Single Column Start -->
-                                                <li>
-                                                    <ul>
-                                                        <li class="menu-title">Necklaces</li>
-                                                        <li>
-                                                            <a href="shop.html">Flickr</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Flip Box</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Frame</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Gallery</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Cocktail</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <!-- Single Column End -->
-                                                <!-- Single Column Start -->
-                                                <li>
-                                                    <ul>
-                                                        <li class="menu-title">Bracelets</li>
-                                                        <li>
-                                                            <a href="shop.html">Platform Beds</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Storage Beds</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Regular Beds</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Sleigh Beds</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Laundry</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <!-- Single Column End -->
-                                            </ul>
-                                            <!-- Mega-Menu End -->
-                                        </li>
-                                        <li>
-                                            <a class="drop-icon" href="shop.html">Beauty</a>
-                                            <!--  Mega-Menu Start -->
-                                            <ul class="ht-dropdown megamenu megamenu-three ">
-                                                <!-- Single Column Start -->
-                                                <li>
-                                                    <ul>
-                                                        <li class="menu-title">portfolio</li>
-                                                        <li>
-                                                            <a href="shop.html">Fusions & Fashions</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Style Statements</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Bangs and Fringes</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Expert Musings</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Style D Dress</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <!-- Single Column End -->
-                                                <!-- Single Column Start -->
-                                                <li>
-                                                    <ul>
-                                                        <li class="menu-title">popover</li>
-                                                        <li>
-                                                            <a href="shop.html">Platform Beds</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Storage Beds</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Regular Beds</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Sleigh Beds</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Laundry</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <!-- Single Column End -->
-                                                <!-- Single Column Start -->
-                                                <li>
-                                                    <ul>
-                                                        <li class="menu-title">promotion</li>
-                                                        <li>
-                                                            <a href="shop.html">Document</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Dropcap</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Dummy Image</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Dummy Text</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="shop.html">Fancy Text</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <!-- Single Column End -->
-                                            </ul>
-                                            <!-- Mega-Menu End -->
-                                        </li>
-                                        <li>
-                                            <a class="drop-icon" href="shop.html">shop</a>
-                                            <!-- Home Version Dropdown Start -->
-                                            <ul class="ht-dropdown">
-                                                <li>
-                                                    @Html.ActionLink("Products","Index","Shop")
-                                                </li>
-                                                <li>
-                                                    <a href="cart.html">cart</a>
-                                                </li>
-                                                <li>
-                                                    <a href="wishlist.html">wishlist</a>
-                                                </li>
-                                            </ul>
-                                            <!-- Home Version Dropdown End -->
-                                        </li>
-                                        <li>
-                                            <a class="drop-icon" href="blog.html">blog</a>
-                                            <!-- Home Version Dropdown Start -->
-                                            <ul class="ht-dropdown blog-dropdown">
-                                                <li>
-                                                    <a href="blog-details.html">Blog Details</a>
-                                                </li>
-                                            </ul>
-                                            <!-- Home Version Dropdown End -->
-                                        </li>
-                                        <li>
-                                            <a class="drop-icon" href="#">pages</a>
-                                            <!-- Home Version Dropdown Start -->
-                                            <ul class="ht-dropdown">
-                                                <li>
-                                                    <a href="contact.html">contact us</a>
-                                                </li>
-                                                <li>
-                                                    <a href="about.html">about us</a>
-                                                </li>
-                                                <li>
-                                                    <a href="register.html">register</a>
-                                                </li>
-                                                <li>
-                                                    <a href="login.html">Login</a>
-                                                </li>
-                                                <li>
-                                                    <a href="404.html">404</a>
-                                                </li>
-                                                <li>
-                                                    <a href="forgot-password.html">forgot password</a>
-                                                </li>
-                                            </ul>
-                                            <!-- Home Version Dropdown End -->
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">Kiểm tra đơn hàng</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!-- Menu Area End Here -->
-                            <!-- Cart Box Start Here -->
-                            <div class="col-xl-2 col-lg-2 col-6">
-                                <div class="cart-box">
-                                    <ul>
-                                        <!-- Search Box Start Here -->
-                                        <li>
-                                            <a href="#">
-                                                <span class="pe-7s-search"></span>
-                                            </a>
-                                            <div class="categorie-search-box ht-dropdown">
-                                                <form action="#">
-                                                    <input type="text" name="search" placeholder="Search our catalog">
-                                                    <button>
-                                                        <span class="pe-7s-search"></span>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </li>
-                                        <!-- Categorie Search Box End Here -->
-                                        <li>
-                                            <a href="#">
-                                                <span class="pe-7s-shopbag"></span>
-                                                <span class="total-pro">2</span>
-                                            </a>
-                                            <ul class="ht-dropdown cart-box-width">
-                                                <li>
-                                                    <!-- Cart Box Start -->
-                                                    <div class="single-cart-box">
-                                                        <div class="cart-img">
-                                                            <a href="#">
-                                                                <img src="~/Assets/User/img/products/cosmetic/1.jpg" alt="cart-image">
-                                                            </a>
-                                                            <span class="pro-quantity">1X</span>
-                                                        </div>
-                                                        <div class="cart-content">
-                                                            <h6>
-                                                                <a href="cart.html">Modern Eye Brush </a>
-                                                            </h6>
-                                                            <span class="cart-price">27.45</span>
-                                                            <span>Size: S</span>
-                                                            <span>Color: Yellow</span>
-                                                        </div>
-                                                        <a class="del-icone" href="#">
-                                                            <i class="ion-close"></i>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Cart Box End -->
-                                                    <!-- Cart Box Start -->
-                                                    <div class="single-cart-box">
-                                                        <div class="cart-img">
-                                                            <a href="#">
-                                                                <img src="~/Assets/User/img/products/cosmetic/2.jpg" alt="cart-image">
-                                                            </a>
-                                                            <span class="pro-quantity">1X</span>
-                                                        </div>
-                                                        <div class="cart-content">
-                                                            <h6>
-                                                                <a href="cart.html">Flat Velvet Lipstick</a>
-                                                            </h6>
-                                                            <span class="cart-price">45.00</span>
-                                                            <span>Size: XL</span>
-                                                            <span>Color: Green</span>
-                                                        </div>
-                                                        <a class="del-icone" href="#">
-                                                            <i class="ion-close"></i>
-                                                        </a>
-                                                    </div>
-                                                    <!-- Cart Box End -->
-                                                    <!-- Cart Footer Inner Start -->
-                                                    <div class="cart-footer">
-                                                        <ul class="price-content">
-                                                            <li>
-                                                                Subtotal
-                                                                <span>$57.95</span>
-                                                            </li>
-                                                            <li>
-                                                                Shipping
-                                                                <span>$7.00</span>
-                                                            </li>
-                                                            <li>
-                                                                Taxes
-                                                                <span>$0.00</span>
-                                                            </li>
-                                                            <li>
-                                                                Total
-                                                                <span>$64.95</span>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="cart-actions text-center">
-                                                            <a class="cart-checkout" href="checkout.html">Checkout</a>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Cart Footer Inner End -->
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Cart Box End Here -->
-                        </div>
-                        <!-- Row End -->
-                       
-                    </div>
-                    <!-- Container End -->
-                </div>
-            </div>
-            <!-- Header Middle End Here -->
-        </header>
+        </div>
+        <!-- Header Middle End Here -->
         <!-- Main Header Area Three End Here -->
         <!-- Main Header Area End Here -->
 
@@ -487,117 +251,11 @@
         @RenderBody()
         <br /><br />
         <!-- Footer Area Start Here -->
-        <footer class="pb-35">
-            <div class="container">
-                <!-- Footer Middle Start -->
-                <div class="footer-middle ptb-90">
-                    <div class="row">
-                        <!-- Single Footer Start -->
-                        <div class="col-lg-4 col-md-6 mb-all-30">
-                            <div class="single-footer">
-                                
-                                <div class="footer-content">
-                                    <h4 class="footer-title">Contact</h4>
-                                    <ul class="footer-list first-content">
-                                        <li>
-                                            <i class="pe-7s-map-marker"></i>16B Nguyễn Thái Học - Hà Đông.
-                                        </li>
-                                        <li><i class="pe-7s-call"></i>0977359131</li>
-                                        <li><i class="pe-7s-clock"></i>Working time: 9AM - 9PM</li>
-                                        <li class="mt-20">
-                                            <ul class="social-icon">
-                                                <li>
-                                                    <a href="https://www.facebook.com/LeeLynSkinCareForBetterLife/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <div class="footer-logo mb-20">
-                                            <a href="#"><img class="img" src="~/Assets/User/img/logo/54be9684-4d16-4cdb-81f8-bad8bc44fb7d_200x200.png" alt="logo-img"></a>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Footer Start -->
-                        <!-- Single Footer Start -->
-                        <div class="col-lg-2 col-md-6 mb-all-30">
-                            <div class="single-footer">
-                                <div class="single-footer">
-                                    <h4 class="footer-title">products</h4>
-                                    <div class="footer-content">
-                                        <ul class="footer-list">
-                                            <li><a href="#">Prices drop</a></li>
-                                            <li><a href="#">New products</a></li>
-                                            <li><a href="#">Best sales</a></li>
-                                            <li><a href="#">terms & conditions</a></li>
-                                            <li><a href="#">Contact us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Footer Start -->
-                        <!-- Single Footer Start -->
-                        <div class="col-lg-2 col-md-6 mb-sm-30">
-                            <div class="single-footer">
-                                <div class="single-footer">
-                                    <h4 class="footer-title">our company</h4>
-                                    <div class="footer-content">
-                                        <ul class="footer-list">
-                                            <li><a href="#">delivery</a></li>
-                                            <li><a href="#">about us</a></li>
-                                            <li><a href="#">contact us</a></li>
-                                            <li><a href="#">sitemap</a></li>
-                                            <li><a href="#">stores</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Footer Start -->
-                        <!-- Single Footer Start -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-footer">
-                                <div class="single-footer">
-                                    <h4 class="footer-title">Join Our Newsletter Now </h4>
-                                    <div class="footer-content subscribe-form">
-                                        <div class="subscribe-box">
-                                            <form action="#">
-                                                <input type="text" id="subscribe_email" placeholder="Your email address">
-                                                <button type="submit" class="pe-7s-mail-open"></button>
-                                            </form>
-                                        </div>
-                                        <p class="mt-10">
-                                            Get E-mail updates about our latest shop and special offers.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Footer Start -->
-                    </div>
-                    <!-- Row End -->
-                </div>
-                <!-- Footer Middle End -->
-                <!-- Footer Bottom Start -->
-                <div class="footer-bottom pt-35">
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-md-between">
-                            <div class="footer-copyright ">
-                                <p>&copy; 2021 <span class="text-uppercase">Lyn's Cosmetics Shop</span>. Made with <i class="fa fa-heart"></i> by <a target="_blank" href="#">Le Tu Hien</a></p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer Bottom End -->
-            </div>
-        </footer>
+        @*do du lieu theo kieu render partial*@
+        @{Html.RenderPartial("_Footer");}
+
         <!-- Footer Area End Here -->
-        
+
     </div>
     <!-- Main Wrapper End Here -->
     <!-- jquery 3.3.1 -->
