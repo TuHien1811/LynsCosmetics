@@ -1,0 +1,102 @@
+﻿
+@model PagedList.IPagedList<LynsCosmetics_Connection.Table_DanhMuc>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 96%;
+            margin: auto;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #2a9fd6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Quản lý danh mục</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","MainAdmin")">Home</a></li>
+            <li class="breadcrumb-item">Quản lý danh mục</li>
+        </ol>
+    </div>
+
+    <table>
+        <tr>
+            <th>Mã danh mục</th>
+            <th>Tên danh mục</th>
+            <th>Tình trạng</th>
+            <th colspan="2">
+                <a href="@Url.Action("Create","DanhMucAdmin")">
+                    <img src="~/Assets/Admin/img/logo/add_icon.png" style="margin-left:25%" />
+                </a>
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaDanhMuc</td>
+                <td>@item.TenDanhMuc</td>
+                @if (@item.TinhTrangDM == "1")
+                {
+                    <td>Ngưng hoạt động</td>
+                }
+                else
+                {
+                    <td>Đang họạt động</td>
+                }
+                <td>
+                    <a href="@Url.Action("Edit","DanhMucAdmin", new { id=item.MaDanhMuc})">
+                        Update  
+                        @*<img src="~/Assets/Admin/img/logo/Edit_icon.png" />*@
+                    </a>
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteDanhMuc", "DanhMucAdmin", new { id = item.MaDanhMuc }, new { onclick = "return confirm('Are you sure you wish to delete this?');" })
+                </td>
+
+            </tr>
+        }
+
+
+    </table>
+    <!-- Shop Breadcrumb Area Start -->
+    <div class="shop-breadcrumb-area border-default mt-30">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-5">
+                <span class="show-items">Showing @Model.Count rows of results </span>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-7">
+                <ul class="pfolio-breadcrumb-list text-center">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Shop Breadcrumb Area End -->
+</body>
+</html>
+
+
+
+
