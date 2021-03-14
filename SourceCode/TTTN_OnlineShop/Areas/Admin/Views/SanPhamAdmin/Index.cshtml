@@ -1,8 +1,113 @@
 ﻿
+@model PagedList.IPagedList<LynsCosmetics_Connection.Table_SanPham>
+@using PagedList.Mvc
+
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
 }
 
-<h2>Giao diện quản lý sản phẩm</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 96%;
+            margin: auto;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #2a9fd6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Quản lý sản phẩm</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","MainAdmin")">Home</a></li>
+            <li class="breadcrumb-item">Quản lý sản phẩm</li>
+        </ol>
+    </div>
+
+    <table>
+        <tr>
+            <th>Mã sản phẩm</th>
+            <th style="width:20%">Tên sản phẩm</th>
+            <th>Danh mục</th>
+            <th>Thương hiệu sản xuất</th>
+            <th>Giá bán</th>
+            <th>Hình minh họa</th>
+            <th>Tình trạng</th>
+            <th colspan="2">
+                <a href="@Url.Action("Create","SanPhamAdmin")">
+                    <img src="~/Assets/Admin/img/logo/add_icon.png" style="margin-left:25%" />
+                </a>
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaSanPham</td>
+                <td>@item.TenSanPham</td>
+                <td>@TTTN_OnlineShop.Models.BUS.DanhMucBUS.ChiTietDanhMuc(item.MaDanhMuc).TenDanhMuc</td>
+                <td>@TTTN_OnlineShop.Models.BUS.ThuongHieuBUS.ChiTietThuongHieu(item.MaThuongHieu).TenThuongHieu</td>
+                <td>@item.GiaBan.ToString("#,###,000" + " VNĐ")</td>
+                <td><img src="~/Assets/User/img/products/cosmetic/@item.HinhMinhHoa" style="width:150px; height:150px" /></td>
+                @if (@item.TinhTrang == "1")
+                {
+                    <td>Đang bán</td>
+                }
+                else
+                {
+                    <td>Ngưng bán</td>
+                }
+                <td>
+                    <a href="@Url.Action("Edit","SanPhamAdmin", new { id=item.MaSanPham})">
+                        Update
+                        @*<img src="~/Assets/Admin/img/logo/Edit_icon.png" />*@
+                    </a>
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteSanPham", "SanPhamAdmin", new { id = item.MaSanPham }, new { onclick = "return confirm('Are you sure you wish to delete this?');" })
+                </td>
+
+            </tr>
+        }
+
+
+    </table>
+    <!-- Shop Breadcrumb Area Start -->
+    <div class="shop-breadcrumb-area border-default mt-30">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-5">
+                <span class="show-items">Showing @Model.Count rows of results </span>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-7">
+                <ul class="pfolio-breadcrumb-list text-center">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Shop Breadcrumb Area End -->
+</body>
+</html>
+
+
+
+
 

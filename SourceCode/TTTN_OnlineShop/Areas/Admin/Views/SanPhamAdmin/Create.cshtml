@@ -1,0 +1,126 @@
+﻿@model IEnumerable<LynsCosmetics_Connection.Table_ThuongHieu>
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<script src="~/Assets/Admin/js/Product/previewFile.js"></script>
+<h2>Create</h2>
+<style>
+    input[type=text] {
+        width: 100%;
+        height: 40px;
+        background-color: white;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=number] {
+        width: 100%;
+        height: 40px;
+        background: white;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        background-color: #2a9fd6;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        width: 300px;
+        margin-left: 32%;
+        border: 1px solid #ccc;
+    }
+
+        input[type=submit]:hover {
+            background-color: #33FFD8;
+        }
+</style>
+@using (Html.BeginForm("Create", "SanPhamAdmin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table style="width:90% ;margin:auto; background:white;">
+
+        <tr>
+            <td style="width:18%">Tên Sản Phẩm</td>
+            <td> <input style="width:700px; float:left;" type="text" name="TenSanPham" placeholder="Tên sản phẩm..." required /></td>
+
+        </tr>
+        <tr>
+                <td>Danh mục sản phẩm</td>
+                <td>
+                    @Html.DropDownList("MaDanhMuc", null, new { @class = "form-control"})
+                </td>
+                <td rowspan="8">
+                    <div>
+                        <img id="target" class="img" src="#" alt="your image  preview" style="float:right;width:250px;height:310px;"></img>
+                    </div>
+                </td>
+            </tr>
+        <tr>
+                <td>Thương hiệu sản xuất</td>
+                <td>
+                    @Html.DropDownList("MaThuongHieu", null, new { @class = "form-control" })
+                </td>
+
+            </tr>
+        <tr>
+            <td>Giá bán</td>
+            <td> <input style="width: 700px; float:left;" type="number" name="GiaBan" min="1" required /></td>
+        </tr>
+        <tr>
+            <td>Hình minh họa</td>
+            <td><input type="file" name="HinhMinhHoa" id="file_Hinh" onchange="previewFile();" required /></td>
+        </tr>
+        <tr>
+            <td>Hình 1</td>
+            <td><input style="float:left;" type="file" id="file_Hinh1" name="HinhNho1" /></td>
+        </tr>
+        <tr>
+            <td>Hình 2</td>
+            <td><input style="float:left;" type="file" id="file_Hinh2" name="HinhNho2" /></td>
+        </tr>
+        <tr>
+            <td>Hình 3</td>
+            <td><input style="float:left;" type="file" id="file_Hinh3" name="HinhNho3" /></td>
+        </tr>
+        <tr>
+            <td>Tình trạng</td>
+            <td>
+                <select style="width:700px; height:40px;border-radius:4px;" id="tinhtrang" name="TinhTrang" required>
+                    <option value="1">Đang bán</option>
+                    <option value="0">Ngưng bán</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Giới thiệu</td>
+            <td> <input style="width: 700px;float:left;" type="text" name="GioiThieu" placeholder="Giới thiệu sản phẩm..." required /></td>
+        </tr>
+        <tr>
+            <td>Mô tả</td>
+            <td colspan="2" style="width:700px"><textarea class="ckeditor" name="MoTa" rows="4" cols="30"></textarea></td>
+        </tr>
+        <tr>
+            <td>Ghi Chú</td>
+            <td> <input style="width: 700px;float:left;" type="text" name="GhiChu" placeholder="Ghi chú đặc biệt..." required /></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="submit" name="btnThemSanPham" value="Thêm sản phẩm" />
+            </td>
+        </tr>
+
+    </table>
+}

@@ -45,5 +45,6 @@ namespace TTTN_OnlineShop.Models.BUS
             var db = new LynsCosmetics_ConnectionDB();
             db.Execute("Delete from Table_DanhMuc where MaDanhMuc =@0", id);
         }
+        
     }
 }
