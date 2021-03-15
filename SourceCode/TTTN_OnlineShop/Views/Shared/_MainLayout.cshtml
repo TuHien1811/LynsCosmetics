@@ -53,6 +53,7 @@
             headerPartial = new MvcHtmlString(headerPartial.ToString());
         }
         @headerPartial
+
         <!-- Header Middle Start Here -->
         <div class="header-middle stick header-sticky">
             <div class="header-middle_nav position-relative">
@@ -61,8 +62,7 @@
                         <!-- Logo Start -->
                         <div class="col-xl-3 col-lg-2 col-6">
                             <div class="logo">
-                                <a href="index-cosmetic.html">
-                                    @*<img src="~/Assets/User/img/logo/logo.png" alt="logo-image">*@
+                                <a href="#">
                                     <h3>Lyn's Cosmetics</h3>
                                 </a>
                             </div>
@@ -79,7 +79,7 @@
                                     @Html.Partial("_ThuongHieu", TTTN_OnlineShop.Models.BUS.ThuongHieuBUS.Danhsach())
                                     @Html.Partial("_DanhMuc", TTTN_OnlineShop.Models.BUS.DanhMucBUS.Danhsach())
                                     <li>
-                                        <a class="drop-icon" href="shop.html">shop</a>
+                                        <a class="drop-icon" href="#">shop</a>
                                         <!-- Home Version Dropdown Start -->
                                         <ul class="ht-dropdown">
                                             <li>
@@ -127,7 +127,7 @@
                                         <!-- Home Version Dropdown End -->
                                     </li>
                                     <li>
-                                        <a href="cart.html">My Orders</a>
+                                        <a href="#">My Orders</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -250,7 +250,7 @@
         <!-- Footer Area Start Here -->
         @*do du lieu theo kieu render partial*@
         @{Html.RenderPartial("_Footer");}
-
+        @RenderSection("scripts", required: false)
         <!-- Footer Area End Here -->
 
     </div>

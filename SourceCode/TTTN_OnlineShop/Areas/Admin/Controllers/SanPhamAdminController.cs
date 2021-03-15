@@ -13,6 +13,7 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
 {
     public class SanPhamAdminController : Controller
     {
+        [Authorize(Roles = "Admin")]
         // GET: Admin/SanPhamAdmin
         public ActionResult Index(int page = 1, int pagesize = 10)
         {

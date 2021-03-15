@@ -21,8 +21,9 @@ namespace TTTN_OnlineShop.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("LynsCosmetics_Connection", throwIfV1Schema: false)
         {
+
         }
 
         public static ApplicationDbContext Create()

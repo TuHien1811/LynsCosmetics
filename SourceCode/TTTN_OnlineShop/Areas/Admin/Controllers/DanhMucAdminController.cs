@@ -11,6 +11,8 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
 {
     public class DanhMucAdminController : Controller
     {
+
+        [Authorize(Roles = "Admin")]
         // GET: Admin/DanhMucAdmin
         public ActionResult Index(int page = 1, int pagesize = 8)
         {

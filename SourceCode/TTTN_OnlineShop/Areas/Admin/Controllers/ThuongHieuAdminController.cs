@@ -11,6 +11,7 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
 {
     public class ThuongHieuAdminController : Controller
     {
+        [Authorize(Roles = "Admin")]
         // GET: Admin/ThuongHieuAdmin
         public ActionResult Index(int page =1, int pagesize=8)
         {
