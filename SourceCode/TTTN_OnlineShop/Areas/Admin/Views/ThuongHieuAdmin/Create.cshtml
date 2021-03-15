@@ -7,26 +7,36 @@
 
 <!DOCTYPE html>
 <html>
+<script src="~/Assets/Admin/js/Product/previewFile.js"></script>
 <style>
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-    input[type=submit] {
+    input[type=text] {
         width: 100%;
+        height: 40px;
+        background-color: white;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+  
+    input[type=file] {
+        width: 100%;
+        display: inline-block;
+        
+    }
+    input[type=submit] {
         background-color: #2a9fd6;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
         border: none;
-        border-radius: 4px;
+        border-radius: 20px;
         cursor: pointer;
+        width: 300px;
+        margin-left: 32%;
+        border: 1px solid #ccc;
     }
 
         input[type=submit]:hover {
@@ -35,6 +45,7 @@ input[type=text], select {
 
 
 </style>
+
 <body>
 
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -45,22 +56,47 @@ input[type=text], select {
             <li class="breadcrumb-item">Thêm mới</li>
         </ol>
     </div>
-    <div style="margin:auto;width:50%;">
-        @using (Html.BeginForm("Create", "ThuongHieuAdmin", FormMethod.Post))
-        {
-            <label for="nBarnd">Tên thương hiệu</label>
-            <input type="text" id="nBrand" name="TenThuongHieu" placeholder="Tên thương hiệu.." required>
+    @using (Html.BeginForm("Create", "ThuongHieuAdmin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+<table style="width:90% ;margin:auto; background:white;">
 
-            <label for="tinhtrang">Tình trạng</label>
-            <select id="tinhtrang" name="TinhTrangTH" required>
+    <tr>
+        <td style="width:18%">Tên thương hiệu</td>
+        <td> <input style="width:700px; float:left;" type="text" name="TenThuongHieu" placeholder="Tên thương hiệu..." required /></td>
+        <td rowspan="8">
+            <div>
+                <img id="target" class="img" src="#" alt="your image  preview" style="float:right;width:200px;height:200px;"></img>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="height:10px"></td>
+    </tr>
+    <tr>
+        <td style="width:18%">Logo đại diện</td>
+        <td><input type="file" name="LogoTH" id="file_Hinh" onchange="previewFile();" required></td>
+
+    </tr>
+    <tr>
+        <td colspan="2" style="height:15px"></td>
+    </tr>
+    <tr>
+        <td>Tình trạng</td>
+        <td>
+            <select style="width:700px; height:40px;border-radius:4px;" id="tinhtrang" name="TinhTrangTH" required>
                 <option value="0">Đang hoạt động</option>
                 <option value="1">Ngưng hoạt động</option>
             </select>
+        </td>
+    </tr>
 
-            <input type="submit" value="Thêm mới">
-        }
+    <tr>
+        <td colspan="3">
+            <input type="submit" name="btnThemThuongHieu" value="Thêm mới" />
+        </td>
+    </tr>
 
-    </div>
-
-</body>
+</table>
+    }
+    </body>
 </html>

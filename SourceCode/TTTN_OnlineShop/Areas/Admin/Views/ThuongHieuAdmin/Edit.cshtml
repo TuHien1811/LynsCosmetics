@@ -7,9 +7,12 @@
 
 <!DOCTYPE html>
 <html>
+<script src="~/Assets/Admin/js/Product/previewFile.js"></script>
 <style>
-    input[type=text], select {
+    input[type=text] {
         width: 100%;
+        height: 40px;
+        background-color: white;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
@@ -18,15 +21,22 @@
         box-sizing: border-box;
     }
 
-    input[type=submit] {
+    input[type=file] {
         width: 100%;
+        display: inline-block;
+    }
+
+    input[type=submit] {
         background-color: #2a9fd6;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
         border: none;
-        border-radius: 4px;
+        border-radius: 20px;
         cursor: pointer;
+        width: 300px;
+        margin-left: 32%;
+        border: 1px solid #ccc;
     }
 
         input[type=submit]:hover {
@@ -43,16 +53,41 @@
             <li class="breadcrumb-item">Cập nhật thông tin</li>
         </ol>
     </div>
-    <div style="margin:auto;width:50%;">
-        @using (Html.BeginForm("Edit", "ThuongHieuAdmin", FormMethod.Post))
-        {
-            <label for="nBarnd">Mã thương hiệu</label>
-            <input type="text" id="maTH" name="MaThuongHieu" placeholder="Mã thương hiệu.." value="@Model.MaThuongHieu" readonly>
-            <label for="nBarnd">Tên thương hiệu</label>
-            <input type="text" id="tenTH" name="TenThuongHieu" placeholder="Tên thương hiệu.." value="@Model.TenThuongHieu" required>
 
-            <label for="tinhtrang">Tình trạng</label>
-            <select id="tinhtrang" name="TinhTrangTH" required>
+    @using (Html.BeginForm("Edit", "ThuongHieuAdmin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+<table style="width:90% ;margin:auto; background:white;">
+    <tr>
+        <td style="width:18%">Mã thương hiệu</td>
+        <td><input style="width:700px; float:left;" type="text" name="MaThuongHieu" value="@Model.MaThuongHieu" readonly required></td>
+    </tr>
+    <tr>
+        <td colspan="2" style="height:10px"></td>
+    </tr>
+    <tr>
+        <td style="width:18%">Tên thương hiệu</td>
+        <td> <input style="width:700px; float:left;" type="text" name="TenThuongHieu" value="@Model.TenThuongHieu" placeholder="Tên thương hiệu..." required /></td>
+        <td rowspan="8">
+            <div>
+                <img id="target" class="img" src="~/Assets/User/img/products/cosmetic/@Model.LogoTH" alt="your image  preview" style="float:right;width:200px;height:200px;"></img>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="height:10px"></td>
+    </tr>
+    <tr>
+        <td style="width:18%">Logo đại diện</td>
+        <td><input type="file" name="LogoTH" id="file_Hinh" onchange="previewFile();"></td>
+
+    </tr>
+    <tr>
+        <td colspan="2" style="height:15px"></td>
+    </tr>
+    <tr>
+        <td>Tình trạng</td>
+        <td>
+            <select id="tinhtrang" name="TinhTrangTH" style="width:700px; height:40px;border-radius:4px;" required>
                 @if (Model.TinhTrangTH == "1")
                 {
                     <option value="0">Đang hoạt động</option>
@@ -63,13 +98,18 @@
                     <option value="0" selected>Đang hoạt động</option>
                     <option value="1">Ngưng hoạt động</option>
                 }
-                
+
             </select>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <input type="submit" name="btnSuaThuongHieu" value="Cập nhật" />
+        </td>
+    </tr>
 
-            <input type="submit" value="Cập nhật">
-        }
-
-    </div>
+</table>
+    }
 
 </body>
 </html>

@@ -5,15 +5,16 @@
     <ul class="ht-dropdown megamenu megamenu-three ">
         <!-- Single Column Start -->
         <li>
-            <ul>
+            
+            <table>
                 @foreach (var item in Model)
                 {
-                        <li>
-                            <a href="@Url.Action("Index","ThuongHieu",new { id=item.MaThuongHieu})">@item.TenThuongHieu</a>
-                        </li>
-
+                <tr>
+                    <td><a href="@Url.Action("Index","ThuongHieu",new { id=item.MaThuongHieu})"><img src="~/Assets/User/img/products/cosmetic/@item.LogoTH" width="50px" height="50px" /></a></td>
+                    <td><a href="@Url.Action("Index","ThuongHieu",new { id=item.MaThuongHieu})">@item.TenThuongHieu</a></td>
+                </tr>
                 }
-            </ul>
+                </table>
         </li>
         <!-- Single Column End -->
     </ul>

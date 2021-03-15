@@ -158,5 +158,6 @@ namespace LynsCosmetics_Connection
 		[Column] public int MaThuongHieu { get; set; }
 		[Column] public string TenThuongHieu { get; set; }
 		[Column] public string TinhTrangTH { get; set; }
+		[Column] public string LogoTH { get; set; }
 	}
 }

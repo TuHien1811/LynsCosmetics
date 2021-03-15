@@ -1,6 +1,5 @@
 
-/*----------------------------------------*/
-/* 1. Theme Default CSS
+
 /*----------------------------------------*/
 body {
     font-family: 'Libre Franklin', sans-serif;
@@ -36,8 +35,7 @@ ul {
     overflow: hidden;
 }
 
-/*----------------------------------------*/
-/* 1.1 Makali's Button Variation
+
 /*----------------------------------------*/
 .makali-btn a,
 .makali-sm_btn a,
@@ -5015,11 +5013,11 @@ ul {
 }
 
 .header-bottom-list ul.ht-dropdown.megamenu-three {
-    width: 692px;
+    width: 392px;
 }
 
 .header-bottom-list ul.ht-dropdown.megamenu-three > li {
-    width: 33.333333%;
+    width: 70%;
     margin-right: 30px;
 }
 

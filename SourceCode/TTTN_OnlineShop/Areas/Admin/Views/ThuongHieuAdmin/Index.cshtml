@@ -44,6 +44,7 @@
         <tr>
             <th>Mã thương hiệu</th>
             <th>Tên thương hiệu</th>
+            <th>Logo</th>
             <th>Tình trạng</th>
             <th colspan="2">
                 <a href="@Url.Action("Create","ThuongHieuAdmin")">
@@ -56,6 +57,7 @@
     <tr>
         <td>@item.MaThuongHieu</td>
         <td>@item.TenThuongHieu</td>
+        <td><img src="~/Assets/User/img/products/cosmetic/@item.LogoTH" style="width:150px; height:150px" /></td>
         @if (@item.TinhTrangTH == "1")
         {
             <td>Ngưng hoạt động</td>

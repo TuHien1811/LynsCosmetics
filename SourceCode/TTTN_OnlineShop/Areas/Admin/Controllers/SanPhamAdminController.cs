@@ -171,7 +171,8 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
                         sanPham.HinhNho3 = tam.HinhNho3;
                     }
                 }
-                
+                sanPham.SoLuongDaBan = tam.SoLuongDaBan;
+                sanPham.LuotView = tam.LuotView;
                 ShopOnlineBUS.suaSanPham(sanPham,id);
                 return RedirectToAction("Index");
 

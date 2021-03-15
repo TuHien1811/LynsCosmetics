@@ -36,8 +36,20 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-                ThuongHieuBUS.themThuongHieu(thuongHieu);
+                if (HttpContext.Request.Files.Count > 0)
+                {
+                    // logo thuong hieu
+                    var hpf = HttpContext.Request.Files[0];
+                    if (hpf.ContentLength > 0)
+                    {
+                        string fileName = Guid.NewGuid().ToString();
+                        string fullPathWithFileName = "~/Assets/User/img/products/cosmetic/" + fileName + ".jpg";
+                        hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                        thuongHieu.LogoTH = fileName + ".jpg";
+                    }
+                }
+                    // TODO: Add insert logic here
+                    ThuongHieuBUS.themThuongHieu(thuongHieu);
                 return RedirectToAction("Index");
             }
             catch
@@ -56,9 +68,27 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Edit(int id, Table_ThuongHieu thuongHieu)
         {
+            var tam = ThuongHieuBUS.ChiTietThuongHieu(id);
             try
             {
                 // TODO: Add update logic here
+                if (HttpContext.Request.Files.Count > 0)
+                {
+                    // logo thuong hieu
+                    var hpf = HttpContext.Request.Files[0];
+                    if (hpf.ContentLength > 0)
+                    {
+                        string fileName = Guid.NewGuid().ToString();
+                        string fullPathWithFileName = "~/Assets/User/img/products/cosmetic/" + fileName + ".jpg";
+                        hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                        thuongHieu.LogoTH = fileName + ".jpg";
+                    }
+                    else
+                    {
+                        thuongHieu.LogoTH = tam.LogoTH;
+                    }
+                }
+               
                 ThuongHieuBUS.suaThuongHieu(thuongHieu,id);
                 return RedirectToAction("Index");
             }
