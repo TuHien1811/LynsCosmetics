@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31019.35
+VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTTN_OnlineShop", "TTTN_OnlineShop.csproj", "{087C6C06-13E2-4477-A476-B762E4F7AA61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTTN_OnlineShop", "TTTN_OnlineShop.csproj", "{EE770958-0C96-477A-9F27-02D317F57EDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{087C6C06-13E2-4477-A476-B762E4F7AA61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{087C6C06-13E2-4477-A476-B762E4F7AA61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{087C6C06-13E2-4477-A476-B762E4F7AA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{087C6C06-13E2-4477-A476-B762E4F7AA61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE770958-0C96-477A-9F27-02D317F57EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE770958-0C96-477A-9F27-02D317F57EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE770958-0C96-477A-9F27-02D317F57EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE770958-0C96-477A-9F27-02D317F57EDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D9A47C24-F795-498D-82A9-DBD6CB9ECCB0}
+		SolutionGuid = {ABF52B34-82BF-42F3-B568-8D1DB602896D}
 	EndGlobalSection
 EndGlobal
