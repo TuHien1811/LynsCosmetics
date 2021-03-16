@@ -1,0 +1,121 @@
+﻿@model IEnumerable<LynsCosmetics_Connection.Table_GioHang>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<style>
+    input[type=text]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #2a9fd6;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        input[type=submit]:hover {
+            background-color: #33FFD8;
+        }
+</style>
+    <!-- Main Wrapper Start Here -->
+    <div class="wrapper">
+       
+        <!-- Breadcrumb Area Start Here -->
+        <div class="breadcrumb-area">
+            <div class="container">
+                <ol class="breadcrumb breadcrumb-list">
+                    <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="breadcrumb-item active">Checkout</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Breadcrumb Area End Here -->
+
+        <!-- checkout-area start -->
+        <div class="checkout-area white-bg pb-90">
+            <div class="container">
+                @using (Html.BeginForm("ThemDonHang", "ThanhToan", FormMethod.Post))
+                {
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="checkbox-form mb-sm-40">
+                                <h3>Billing Details</h3>
+                                <div class="row">
+                                    <table>
+                                        <tr><label for="nten">Họ tên người nhận</label></tr>
+                                        <tr><input type="text" id="ten" name="TenNguoiNhan" placeholder="Tên người nhận.." required></tr>
+                                        <tr><label for="nsdt">Số điện thoại</label></tr>
+                                        <tr><input type="tel" id="sdt" name="SoDienThoai" placeholder="Số điện thoại.." required style="width:100%; border-radius:4px; height:40px;border: 1px solid #ccc;padding: 12px 20px;margin: 8px 0;"></tr>
+                                        <tr><label for="ndiachi">Địa chỉ giao hàng</label></tr>
+                                        <tr><input type="text" id="diachi" name="DiaChiGiaoHang" placeholder="Địa chỉ giao hàng.." required></tr>
+                                        <tr><input type="submit" value="Hoàn thành"></tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="your-order">
+                                <h3>Your order</h3>
+                                <div class="your-order-table table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="product-name">Product</th>
+                                                <th class="product-total">Total</th>
+                                            </tr>
+                                        </thead>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tbody>
+
+                                                <tr class="cart_item">
+                                                    <td class="product-name">
+                                                        @item.TenSanPham<span class="product-quantity"> × @item.SoLuongMua</span>
+                                                    </td>
+                                                    <td class="product-total">
+                                                        <span class="amount">@item.TongTien</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            }
+
+                                        <tfoot>
+                                            <tr class="cart-subtotal">
+                                                <th>Cart Subtotal</th>
+                                                <td><span class="amount">@ViewBag.TongTien</span></td>
+                                            </tr>
+                                            <tr class="order-total">
+                                                <th>Order Total</th>
+                                                <td>
+                                                    <span class=" total amount">@ViewBag.TongTien</span>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+        <!-- checkout-area end -->
+
+    </div>
+    <!-- Main Wrapper End Here -->
+   
+

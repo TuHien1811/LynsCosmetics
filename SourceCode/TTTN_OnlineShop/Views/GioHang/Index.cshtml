@@ -1,0 +1,112 @@
+﻿@model IEnumerable<LynsCosmetics_Connection.Table_GioHang>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!-- Breadcrumb Area Start Here -->
+<div class="breadcrumb-area">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb-list">
+            <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li class="breadcrumb-item active">Cart</li>
+        </ol>
+    </div>
+</div>
+<!-- Breadcrumb Area End Here -->
+<!-- Cart Main Area Start -->
+<div class="cart-main-area  ptb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!-- Form Start -->
+                <form action="#">
+                    <!-- Table Content Start -->
+                    <div class="table-content table-responsive mb-45">
+                        
+                        <table>
+                                <tr>
+                                    <th class="product-thumbnail">Image</th>
+                                    <th class="product-name">Product</th>
+                                    <th class="product-price">Price</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-subtotal">Total</th>
+                                    <th class="product-remove">Update</th>
+                                    <th class="product-remove">Remove</th>
+                                </tr>
+                            @foreach (var item in Model)
+                            {
+                        <tr>
+                            @using (Html.BeginForm("CapNhat", "GioHang", FormMethod.Post))
+                            {
+                                <input type="hidden" name="maSanPham" value="@item.MaSanPham" />
+                                <input type="hidden" name="tenSanPham" value="@item.TenSanPham" />
+                                <input type="hidden" name="hinhMinhHoa" value="@item.HinhMinhHoa" />
+                                <input type="hidden" name="giaBan" value="@item.GiaBan" />
+
+
+                                @Html.Partial("_GioHang", TTTN_OnlineShop.Models.BUS.ShopOnlineBUS.ChiTiet(item.MaSanPham))
+                                <td class="product-quantity"><input type="number" value="@item.SoLuongMua" name="SoLuongMua" min="1" /></td>
+                                <td style="margin:auto">
+                                    <input type="submit" value="Update Cart" style="background-color: chocolate; color: white; width:110px; height:40px;" />
+                                </td>
+                                <td>
+                                    @item.TongTien
+                                </td>
+
+                            }
+
+                            <td class="product-remove" style="text-align:center;">
+                                @*<a style="border:1px solid orange; padding: 10px 10px; border-radius:5px; background-color:chocolate; color:white" href="@Html.ActionLink("Remove","Xoa","GioHang",new { maSanPham= item.MaSanPham}, new{ onclick = "return confirm('Are u sure u want to delete this?')" })">Remove</a>*@
+                                @Html.ActionLink("x", "Xoa", "GioHang", new { maSanPham = item.MaSanPham }, new { onclick = "return confirm('Are u sure u want to delete this?')" })
+                            </td>
+                        </tr>    
+                            }
+
+
+                        </table>
+                        </div>
+                    <!-- Table Content Start -->
+                    <div class="row">
+                        <!-- Cart Button Start -->
+                        <div class="col-md-8 col-sm-12">
+                            <div class="buttons-cart">
+                                @Html.ActionLink("Continue Shopping", "Index", "Shop")
+                            </div>
+                        </div>
+                        <!-- Cart Button Start -->
+                        <!-- Cart Totals Start -->
+                        <div class="col-md-4 col-sm-12">
+                            <div class="cart_totals float-md-right text-md-right">
+                                <h2>Cart Totals</h2>
+                                <br />
+                                <table class="float-md-right">
+                                    <tbody>
+                                        <tr class="cart-subtotal">
+                                            <th>Subtotal</th>
+                                            <td><span class="amount">@ViewBag.TongTien</span></td>
+                                        </tr>
+                                        <tr class="order-total">
+                                            <th>Total</th>
+                                            <td>
+                                                <strong><span class="amount">@ViewBag.TongTien</span></strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="wc-proceed-to-checkout">
+                                    @Html.ActionLink("Checkout", "Index", "ThanhToan")
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cart Totals End -->
+                    </div>
+                    <!-- Row End -->
+                </form>
+                <!-- Form End -->
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+</div>
+<!-- Cart Main Area End -->

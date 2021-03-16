@@ -72,47 +72,27 @@
                     <p class="pro-desc-details">
                         @Model.GioiThieu
                     </p>
-                    
-                    <div class="product-size mtb-30 clearfix">
-                        <label>Size</label>
-                        <select class="">
-                            <option>S</option>
-                            <option>M</option>
-                            <option>L</option>
-                        </select>
-                    </div>
-                    <div class="color clearfix mb-30">
-                        <label>color</label>
-                        <ul class="color-list">
-                            <li>
-                                <a class="white" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="orange active" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="paste" href="#"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="quatity-stock">
+
+
+
+                    @using (Html.BeginForm("Them", "GioHang", FormMethod.Post))
+                    {
+                        <input type="hidden" name="tenSanPham" value="@Model.TenSanPham" />
+                        <input type="hidden" name="maSanPham" value="@Model.MaSanPham" />
+                        <input type="hidden" name="hinhMinhHoa" value="@Model.HinhMinhHoa" />
+                        <input type="hidden" name="giaBan" value="@Model.GiaBan" />
                         <label>Quantity</label>
-                        <ul class="d-flex flex-wrap  align-items-center">
-                            <li class="box-quantity">
-                                <form action="#">
-                                    <input class="quantity" type="number" min="1" value="1">
-                                </form>
-                            </li>
-                            <li>
-                                <button class="pro-cart">add to cart</button>
-                            </li>
-                            <li class="pro-ref">
-                                <p>
-                                    <span class="in-stock"><i class="ion-checkmark-round"></i> in stock</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
+                        <input class="quantity" type="number" min="1" value="1" name="SoLuongMua">
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            <input type="submit" class="pro-cart" value="Add to cart" />
+                        }
+
+                        else
+                        {
+                            <p>Vui lòng đăng nhập để thêm sản phẩm giỏ hàng</p>
+                        }
+                    }
                     <div class="social-sharing mt-30">
                         <ul>
                             <li><label>share</label></li>

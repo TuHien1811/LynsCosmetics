@@ -137,6 +137,266 @@ namespace LynsCosmetics_Connection
 
     
 
+	[TableName("dbo.__MigrationHistory")]
+
+
+
+	[PrimaryKey("MigrationId", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class __MigrationHistory : LynsCosmetics_ConnectionDB.Record<__MigrationHistory>  
+    {
+
+
+
+		[Column] public string MigrationId { get; set; }
+
+
+
+
+
+		[Column] public string ContextKey { get; set; }
+
+
+
+
+
+		[Column] public byte[] Model { get; set; }
+
+
+
+
+
+		[Column] public string ProductVersion { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetRoles")]
+
+
+
+	[PrimaryKey("Id", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetRole : LynsCosmetics_ConnectionDB.Record<AspNetRole>  
+    {
+
+
+
+		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUserClaims")]
+
+
+
+	[PrimaryKey("Id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUserClaim : LynsCosmetics_ConnectionDB.Record<AspNetUserClaim>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public string UserId { get; set; }
+
+
+
+
+
+		[Column] public string ClaimType { get; set; }
+
+
+
+
+
+		[Column] public string ClaimValue { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUserLogins")]
+
+
+
+	[PrimaryKey("LoginProvider", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUserLogin : LynsCosmetics_ConnectionDB.Record<AspNetUserLogin>  
+    {
+
+
+
+		[Column] public string LoginProvider { get; set; }
+
+
+
+
+
+		[Column] public string ProviderKey { get; set; }
+
+
+
+
+
+		[Column] public string UserId { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUserRoles")]
+
+
+
+	[PrimaryKey("UserId", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUserRole : LynsCosmetics_ConnectionDB.Record<AspNetUserRole>  
+    {
+
+
+
+		[Column] public string UserId { get; set; }
+
+
+
+
+
+		[Column] public string RoleId { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUsers")]
+
+
+
+	[PrimaryKey("Id", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUser : LynsCosmetics_ConnectionDB.Record<AspNetUser>  
+    {
+
+
+
+		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public string Email { get; set; }
+
+
+
+
+
+		[Column] public bool EmailConfirmed { get; set; }
+
+
+
+
+
+		[Column] public string PasswordHash { get; set; }
+
+
+
+
+
+		[Column] public string SecurityStamp { get; set; }
+
+
+
+
+
+		[Column] public string PhoneNumber { get; set; }
+
+
+
+
+
+		[Column] public bool PhoneNumberConfirmed { get; set; }
+
+
+
+
+
+		[Column] public bool TwoFactorEnabled { get; set; }
+
+
+
+
+
+		[Column] public DateTime? LockoutEndDateUtc { get; set; }
+
+
+
+
+
+		[Column] public bool LockoutEnabled { get; set; }
+
+
+
+
+
+		[Column] public int AccessFailedCount { get; set; }
+
+
+
+
+
+		[Column] public string UserName { get; set; }
+
+
+
+	}
+
+    
+
 	[TableName("dbo.sysdiagrams")]
 
 
@@ -185,6 +445,46 @@ namespace LynsCosmetics_Connection
 
     
 
+	[TableName("dbo.Table_ChiTietDonHang")]
+
+
+
+	[PrimaryKey("MaDonHang", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class Table_ChiTietDonHang : LynsCosmetics_ConnectionDB.Record<Table_ChiTietDonHang>  
+    {
+
+
+
+		[Column] public int MaDonHang { get; set; }
+
+
+
+
+
+		[Column] public int MaSanPham { get; set; }
+
+
+
+
+
+		[Column] public int SoLuongMua { get; set; }
+
+
+
+
+
+		[Column] public int Gia { get; set; }
+
+
+
+	}
+
+    
+
 	[TableName("dbo.Table_DanhMuc")]
 
 
@@ -214,6 +514,138 @@ namespace LynsCosmetics_Connection
 
 
 		[Column] public string TinhTrangDM { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.Table_DonHang")]
+
+
+
+	[PrimaryKey("MaDonHang")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class Table_DonHang : LynsCosmetics_ConnectionDB.Record<Table_DonHang>  
+    {
+
+
+
+		[Column] public int MaDonHang { get; set; }
+
+
+
+
+
+		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public DateTime NgayTao { get; set; }
+
+
+
+
+
+		[Column] public string TenNguoiNhan { get; set; }
+
+
+
+
+
+		[Column] public string SoDienThoai { get; set; }
+
+
+
+
+
+		[Column] public string DiaChiGiaoHang { get; set; }
+
+
+
+
+
+		[Column] public int ThanhTien { get; set; }
+
+
+
+
+
+		[Column] public int TrangThaiDonHang { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.Table_GioHang")]
+
+
+
+	[PrimaryKey("IdGioHang")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class Table_GioHang : LynsCosmetics_ConnectionDB.Record<Table_GioHang>  
+    {
+
+
+
+		[Column] public int IdGioHang { get; set; }
+
+
+
+
+
+		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public int MaSanPham { get; set; }
+
+
+
+
+
+		[Column] public string TenSanPham { get; set; }
+
+
+
+
+
+		[Column] public string HinhMinhHoa { get; set; }
+
+
+
+
+
+		[Column] public int GiaBan { get; set; }
+
+
+
+
+
+		[Column] public int SoLuongMua { get; set; }
+
+
+
+
+
+		[Column] public int TongTien { get; set; }
 
 
 

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<LynsCosmetics_Connection.Table_GioHang>
+@{
     ViewBag.Title = "_MainLayout";
 }
 <!doctype html>
@@ -155,54 +156,35 @@
                                     <li>
                                         <a href="#">
                                             <span class="pe-7s-shopbag"></span>
-                                            <span class="total-pro">2</span>
-                                        </a>
-                                        <ul class="ht-dropdown cart-box-width">
-                                            <li>
+                                            <span class="total-pro"></span>
+                                        </a>@Html.ActionLink("Cart", "Index", "GioHang")
+                                        <!--<ul class="ht-dropdown cart-box-width">
+                                            <li>-->
                                                 <!-- Cart Box Start -->
-                                                <div class="single-cart-box">
-                                                    <div class="cart-img">
-                                                        <a href="#">
-                                                            <img src="~/Assets/User/img/products/cosmetic/1.jpg" alt="cart-image">
+                                                <!--foreach (var item in Model)
+                                                {
+                                                    <div class="single-cart-box">
+                                                        <div class="cart-img">
+                                                            <a href="#">
+                                                                <img src="~/Assets/User/img/products/cosmetic/item.HinhMinhHoa" alt="cart-image">
+                                                            </a>
+                                                            <span class="pro-quantity">x item.SoLuongMua</span>
+                                                        </div>
+                                                        <div class="cart-content">
+                                                            <h6>
+                                                                <a href="cart.html">item.TenSanPham </a>
+                                                            </h6>
+                                                            <span class="cart-price">item.GiaBan</span>
+                                                        </div>
+                                                        <a class="del-icone" href="#">
+                                                            <i class="ion-close"></i>
                                                         </a>
-                                                        <span class="pro-quantity">1X</span>
                                                     </div>
-                                                    <div class="cart-content">
-                                                        <h6>
-                                                            <a href="cart.html">Modern Eye Brush </a>
-                                                        </h6>
-                                                        <span class="cart-price">27.45</span>
-                                                        <span>Size: S</span>
-                                                        <span>Color: Yellow</span>
-                                                    </div>
-                                                    <a class="del-icone" href="#">
-                                                        <i class="ion-close"></i>
-                                                    </a>
-                                                </div>
-                                                <!-- Cart Box End -->
-                                                <!-- Cart Box Start -->
-                                                <div class="single-cart-box">
-                                                    <div class="cart-img">
-                                                        <a href="#">
-                                                            <img src="~/Assets/User/img/products/cosmetic/2.jpg" alt="cart-image">
-                                                        </a>
-                                                        <span class="pro-quantity">1X</span>
-                                                    </div>
-                                                    <div class="cart-content">
-                                                        <h6>
-                                                            <a href="cart.html">Flat Velvet Lipstick</a>
-                                                        </h6>
-                                                        <span class="cart-price">45.00</span>
-                                                        <span>Size: XL</span>
-                                                        <span>Color: Green</span>
-                                                    </div>
-                                                    <a class="del-icone" href="#">
-                                                        <i class="ion-close"></i>
-                                                    </a>
-                                                </div>
+                                                }-->
+
                                                 <!-- Cart Box End -->
                                                 <!-- Cart Footer Inner Start -->
-                                                <div class="cart-footer">
+                                                <!--<div class="cart-footer">
                                                     <ul class="price-content">
                                                         <li>
                                                             Subtotal
@@ -224,10 +206,10 @@
                                                     <div class="cart-actions text-center">
                                                         <a class="cart-checkout" href="checkout.html">Checkout</a>
                                                     </div>
-                                                </div>
+                                                </div>-->
                                                 <!-- Cart Footer Inner End -->
-                                            </li>
-                                        </ul>
+                                            <!--</li>
+                                        </ul>-->
                                     </li>
                                 </ul>
                             </div>
