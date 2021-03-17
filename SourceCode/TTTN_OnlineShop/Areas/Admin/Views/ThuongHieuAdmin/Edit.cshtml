@@ -56,59 +56,59 @@
 
     @using (Html.BeginForm("Edit", "ThuongHieuAdmin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-<table style="width:90% ;margin:auto; background:white;">
-    <tr>
-        <td style="width:18%">Mã thương hiệu</td>
-        <td><input style="width:700px; float:left;" type="text" name="MaThuongHieu" value="@Model.MaThuongHieu" readonly required></td>
-    </tr>
-    <tr>
-        <td colspan="2" style="height:10px"></td>
-    </tr>
-    <tr>
-        <td style="width:18%">Tên thương hiệu</td>
-        <td> <input style="width:700px; float:left;" type="text" name="TenThuongHieu" value="@Model.TenThuongHieu" placeholder="Tên thương hiệu..." required /></td>
-        <td rowspan="8">
-            <div>
-                <img id="target" class="img" src="~/Assets/User/img/products/cosmetic/@Model.LogoTH" alt="your image  preview" style="float:right;width:200px;height:200px;"></img>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2" style="height:10px"></td>
-    </tr>
-    <tr>
-        <td style="width:18%">Logo đại diện</td>
-        <td><input type="file" name="LogoTH" id="file_Hinh" onchange="previewFile();"></td>
+        <table style="width:90% ;margin:auto; background:white;">
+            <tr>
+                <td style="width:18%">Mã thương hiệu</td>
+                <td><input style="width:700px; float:left;" type="text" name="MaThuongHieu" value="@Model.MaThuongHieu" readonly required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height:10px"></td>
+            </tr>
+            <tr>
+                <td style="width:18%">Tên thương hiệu</td>
+                <td> <input style="width:700px; float:left;" type="text" name="TenThuongHieu" value="@Model.TenThuongHieu" placeholder="Tên thương hiệu..." required /></td>
+                <td rowspan="8">
+                    <div>
+                        <img id="target" class="img" src="~/Assets/User/img/products/cosmetic/@Model.LogoTH" alt="your image  preview" style="float:right;width:200px;height:200px;"></img>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height:10px"></td>
+            </tr>
+            <tr>
+                <td style="width:18%">Logo đại diện</td>
+                <td><input type="file" name="LogoTH" id="file_Hinh" onchange="previewFile();"></td>
 
-    </tr>
-    <tr>
-        <td colspan="2" style="height:15px"></td>
-    </tr>
-    <tr>
-        <td>Tình trạng</td>
-        <td>
-            <select id="tinhtrang" name="TinhTrangTH" style="width:700px; height:40px;border-radius:4px;" required>
-                @if (Model.TinhTrangTH == "1")
-                {
-                    <option value="0">Đang hoạt động</option>
-                    <option value="1" selected>Ngưng hoạt động</option>
-                }
-                else
-                {
-                    <option value="0" selected>Đang hoạt động</option>
-                    <option value="1">Ngưng hoạt động</option>
-                }
+            </tr>
+            <tr>
+                <td colspan="2" style="height:15px"></td>
+            </tr>
+            <tr>
+                <td>Tình trạng</td>
+                <td>
+                    <select id="tinhtrang" name="TinhTrangTH" style="width:700px; height:40px;border-radius:4px;" required>
+                        @if (Model.TinhTrangTH == "1")
+                        {
+                            <option value="0">Đang hoạt động</option>
+                            <option value="1" selected>Ngưng hoạt động</option>
+                        }
+                        else
+                        {
+                            <option value="0" selected>Đang hoạt động</option>
+                            <option value="1">Ngưng hoạt động</option>
+                        }
 
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="3">
-            <input type="submit" name="btnSuaThuongHieu" value="Cập nhật" />
-        </td>
-    </tr>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="submit" name="btnSuaThuongHieu" value="Cập nhật" />
+                </td>
+            </tr>
 
-</table>
+        </table>
     }
 
 </body>

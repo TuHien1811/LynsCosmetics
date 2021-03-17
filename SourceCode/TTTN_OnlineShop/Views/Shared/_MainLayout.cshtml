@@ -80,55 +80,13 @@
                                     @Html.Partial("_ThuongHieu", TTTN_OnlineShop.Models.BUS.ThuongHieuBUS.Danhsach())
                                     @Html.Partial("_DanhMuc", TTTN_OnlineShop.Models.BUS.DanhMucBUS.Danhsach())
                                     <li>
-                                        <a class="drop-icon" href="#">shop</a>
-                                        <!-- Home Version Dropdown Start -->
-                                        <ul class="ht-dropdown">
-                                            <li>
-                                                @Html.ActionLink("Products", "Index", "Shop")
-                                            </li>
-                                            <li>
-                                                <a href="cart.html">cart</a>
-                                            </li>
-                                        </ul>
-                                        <!-- Home Version Dropdown End -->
+                                        @Html.ActionLink("Shop", "Index", "Shop")
                                     </li>
                                     <li>
-                                        <a class="drop-icon" href="blog.html">blog</a>
-                                        <!-- Home Version Dropdown Start -->
-                                        <ul class="ht-dropdown blog-dropdown">
-                                            <li>
-                                                <a href="blog-details.html">Blog Details</a>
-                                            </li>
-                                        </ul>
-                                        <!-- Home Version Dropdown End -->
+                                        <a href="#">Blog</a>
                                     </li>
                                     <li>
-                                        <a class="drop-icon" href="#">pages</a>
-                                        <!-- Home Version Dropdown Start -->
-                                        <ul class="ht-dropdown">
-                                            <li>
-                                                <a href="contact.html">contact us</a>
-                                            </li>
-                                            <li>
-                                                <a href="about.html">about us</a>
-                                            </li>
-                                            <li>
-                                                <a href="register.html">register</a>
-                                            </li>
-                                            <li>
-                                                <a href="login.html">Login</a>
-                                            </li>
-                                            <li>
-                                                <a href="404.html">404</a>
-                                            </li>
-                                            <li>
-                                                <a href="forgot-password.html">forgot password</a>
-                                            </li>
-                                        </ul>
-                                        <!-- Home Version Dropdown End -->
-                                    </li>
-                                    <li>
-                                        <a href="#">My Orders</a>
+                                        @Html.ActionLink("My Orders", "Index", "DonHang")
                                     </li>
                                 </ul>
                             </nav>

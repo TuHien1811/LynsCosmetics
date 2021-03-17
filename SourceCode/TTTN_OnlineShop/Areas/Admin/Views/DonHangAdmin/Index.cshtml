@@ -1,0 +1,98 @@
+﻿
+@model PagedList.IPagedList<LynsCosmetics_Connection.Table_DonHang>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 96%;
+            margin: auto;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #2a9fd6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Quản lý đơn hàng</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","MainAdmin")">Home</a></li>
+            <li class="breadcrumb-item">Quản lý đơn hàng</li>
+        </ol>
+    </div>
+
+    <table>
+        <tr>
+            <th>Mã đơn hàng</th>
+            <th>Tài khoản</th>
+            <th>Ngày tạo </th>
+            <th>Tổng Tiền</th>
+            <th>Trạng thái đơn hàng</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaDonHang</td>
+                <td>@item.Id</td>
+                <td>@item.NgayTao</td>
+                <td>@item.ThanhTien.ToString("#,###,000" + "VNĐ")</td>
+                @if (item.TrangThaiDonHang == 0)
+                {
+                    <td>Chưa xác nhận</td>
+                }
+                else if (item.TrangThaiDonHang == 1)
+                {
+                    <td>Đã xác nhận</td>
+                }
+                else if (item.TrangThaiDonHang == 2)
+                {
+                    <td>Đã hủy</td>
+                }
+                <td>
+                    <a href="@Url.Action("Edit","DonHangAdmin", new { id=item.MaDonHang})">
+                        <img src="~/Assets/Admin/img/logo/Edit_icon.png" />
+                    </a>
+                </td>
+            </tr>
+        }
+
+
+    </table>
+    <!-- Shop Breadcrumb Area Start -->
+    <div class="shop-breadcrumb-area border-default mt-30">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-5">
+                <span class="show-items">Showing @Model.Count rows of results </span>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-7">
+                <ul class="pfolio-breadcrumb-list text-center">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Shop Breadcrumb Area End -->
+</body>
+</html>
+

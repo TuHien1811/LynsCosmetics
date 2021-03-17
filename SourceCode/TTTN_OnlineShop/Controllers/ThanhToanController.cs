@@ -24,19 +24,6 @@ namespace TTTN_OnlineShop.Controllers
             return View(ds);
         }
 
-        //public ActionResult ThemDonHang(string tenNguoiNhan, string soDienThoai, string diaChi)
-        //{
-        //    try
-        //    {
-        //        GioHangBUS.taoDonHang(User.Identity.GetUserId(),tenNguoiNhan, soDienThoai, diaChi);
-        //        return RedirectToAction("index");
-        //    }
-        //    catch
-        //    {
-        //        return RedirectToAction("../Shop/index"); ;
-        //    }
-
-        //}
         [HttpPost]
         public ActionResult ThemDonHang(Table_DonHang donHang)
         {
@@ -57,6 +44,11 @@ namespace TTTN_OnlineShop.Controllers
                     chiTietDonHang.Gia = item.GiaBan;
                     //luu thong tin san pham vao chi tiet don hang
                     GioHangBUS.taoChiTietDH(chiTietDonHang);
+                    //int a = item.SoLuongMua;
+                    //Table_SanPham sanPham = new Table_SanPham();
+                    //sanPham.SoLuongDaBan = sanPham.SoLuongDaBan + a;
+                    ////Cap nhat so luong da ban trong bang san pham
+                    //ShopOnlineBUS.suaSanPham(sanPham,item.MaSanPham);
                 }
                 //Xoa thong tin san pham trong gio hang
                 GioHangBUS.XoaCartList(User.Identity.GetUserId());

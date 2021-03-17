@@ -175,11 +175,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\DanhMucAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DonHangAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThuongHieuAdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DanhMucController.cs" />
+    <Compile Include="Controllers\DonHangController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -191,6 +193,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BUS\DanhMucBUS.cs" />
+    <Compile Include="Models\BUS\DonHangBUS.cs" />
     <Compile Include="Models\BUS\GioHangBUS.cs" />
     <Compile Include="Models\BUS\ShopOnlineBUS.cs" />
     <Compile Include="Models\BUS\ThuongHieuBUS.cs" />
@@ -3065,6 +3068,8 @@
     <Content Include="Areas\Admin\Views\ThuongHieuAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ThuongHieuAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_MainLayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHangAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHangAdmin\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3125,7 +3130,8 @@
     <Content Include="Views\Shared\_GioHang.cshtml" />
     <Content Include="Views\ThanhToan\Index.cshtml" />
     <Content Include="Views\Shared\_CartList.cshtml" />
-    <Content Include="Views\ThanhToan\Successful.cshtml" />
+    <Content Include="Views\DonHang\Index.cshtml" />
+    <Content Include="Views\DonHang\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,46 +5,57 @@
     <span class="pe-7s-shopbag"></span>
     <span class="total-pro">@Model.Count()</span>
 </a>
-<ul class="ht-dropdown cart-box-width">
-    <li>
-        @foreach (var item in Model)
-        {
-            <div class="single-cart-box">
-                <div class="cart-img">
-                    <a href="#">
-                        <img src="~/Assets/User/img/products/cosmetic/@item.HinhMinhHoa" alt="cart-image">
+@if (Model.Count() > 0)
+{
+    <ul class="ht-dropdown cart-box-width">
+        <li>
+            @foreach (var item in Model)
+            {
+                <div class="single-cart-box">
+                    <div class="cart-img">
+                        <a href="#">
+                            <img src="~/Assets/User/img/products/cosmetic/@item.HinhMinhHoa" alt="cart-image">
+                        </a>
+                        <span class="pro-quantity">x @item.SoLuongMua</span>
+                    </div>
+                    <div class="cart-content">
+                        <h6>
+                            <a href="cart.html">@item.TenSanPham </a>
+                        </h6>
+                        <span class="cart-price">@item.GiaBan</span>
+                    </div>
+                    <a class="del-icone" href="#">
+                        <i class="ion-close"></i>
                     </a>
-                    <span class="pro-quantity">x @item.SoLuongMua</span>
                 </div>
-                <div class="cart-content">
-                    <h6>
-                        <a href="cart.html">@item.TenSanPham </a>
-                    </h6>
-                    <span class="cart-price">@item.GiaBan</span>
+            }
+            <div class="cart-footer">
+                <ul class="price-content">
+                    <li>
+                        Subtotal
+                        <span>@TTTN_OnlineShop.Models.BUS.GioHangBUS.TongTien(User.Identity.GetUserId())</span>
+                    </li>
+                    <li>
+                        Taxes
+                        <span>$0.00</span>
+                    </li>
+                    <li>
+                        Total
+                        <span>@TTTN_OnlineShop.Models.BUS.GioHangBUS.TongTien(User.Identity.GetUserId())</span>
+                    </li>
+                </ul>
+                <div class="cart-actions text-center">
+                    <a class="cart-checkout" href="@Url.Action("Index","ThanhToan")">Checkout</a>
                 </div>
-                <a class="del-icone" href="#">
-                    <i class="ion-close"></i>
-                </a>
             </div>
-        }
-        <div class="cart-footer">
-            <ul class="price-content">
-                <li>
-                    Subtotal
-                    <span>@TTTN_OnlineShop.Models.BUS.GioHangBUS.TongTien(User.Identity.GetUserId())</span>
-                </li>
-                <li>
-                    Taxes
-                    <span>$0.00</span>
-                </li>
-                <li>
-                    Total
-                    <span>@TTTN_OnlineShop.Models.BUS.GioHangBUS.TongTien(User.Identity.GetUserId())</span>
-                </li>
-            </ul>
-            <div class="cart-actions text-center">
-                <a class="cart-checkout" href="#">Checkout</a>
-            </div>
-        </div>
-    </li>
-</ul>
+        </li>
+    </ul>
+}
+else
+{
+    <ul class="ht-dropdown cart-box-width">
+        <li><span>Giỏ hàng của bạn hiện đang trống</span>     
+       </li>    
+    </ul>
+}
+

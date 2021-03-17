@@ -1,0 +1,69 @@
+﻿@model IEnumerable<LynsCosmetics_Connection.Table_DonHang>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<!-- Breadcrumb Area Start Here -->
+<div class="breadcrumb-area">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb-list">
+            <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li class="breadcrumb-item active">My orders</li>
+        </ol>
+    </div>
+</div>
+<!-- Breadcrumb Area End Here -->
+
+<div class="cart-main-area  ptb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!-- Form Start -->
+                <form action="#">
+                    <!-- Table Content Start -->
+                    <div class="table-content table-responsive mb-45">
+                        <table>
+                            <tr>
+                                <th class="product-thumbnail">Orders Code</th>
+                                <th class="product-name">Date Creation</th>
+                                <th class="product-price">Total</th>
+                                <th class="product-quantity">Status</th>
+                            </tr>
+                            @foreach (var item in Model)
+                            {
+                        <tr>
+
+                            <td class="product-quantity"><a href="@Url.Action("Details",new {id = item.MaDonHang})">@item.MaDonHang</a></td>
+                            <td class="product-quantity">@item.NgayTao</td>
+                            <td class="product-quantity">@item.ThanhTien.ToString("#,###,000"+" VNĐ")</td>
+                            @if (item.TrangThaiDonHang == 0)
+                            {
+                                <td class="product-quantity">Chưa xác nhận</td>
+                            }
+                            else if (item.TrangThaiDonHang == 1)
+                            {
+                                <td class="product-quantity">Đã xác nhận</td>
+                            }
+                            else if (item.TrangThaiDonHang == 2)
+                            {
+                                <td class="product-quantity">Đã hủy</td>
+                            }
+
+                        </tr>
+
+                            }
+
+
+                        </table>
+                    </div>
+                    
+                </form>
+                <!-- Form End -->
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+</div>
+

@@ -30,6 +30,7 @@ namespace TTTN_OnlineShop.Models.BUS
             var db = new LynsCosmetics_ConnectionDB();
             return db.Query<Table_SanPham>("select * from Table_SanPham where MaDanhMuc = " + catogeryCode + "and MaThuongHieu = " + brandCode+ "and MaSanPham != " +productCode);
         }
+       
         //--------------------/Code Admin\------------------------------------------
         public static IEnumerable<Table_SanPham> DanhsachFull()
         {

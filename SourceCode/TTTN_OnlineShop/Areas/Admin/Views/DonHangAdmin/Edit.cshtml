@@ -1,0 +1,171 @@
+﻿@model LynsCosmetics_Connection.Table_DonHang
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_MainLayoutAdmin.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<style>
+    input[type=text] {
+        width: 100%;
+        height: 40px;
+        background-color: white;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=file] {
+        width: 100%;
+        display: inline-block;
+    }
+
+    input[type=submit] {
+        background-color: #2a9fd6;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        width: 300px;
+        margin-left: 32%;
+        border: 1px solid #ccc;
+    }
+
+        input[type=submit]:hover {
+            background-color: #33FFD8;
+        }
+</style>
+<body>
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Quản lý đơn hàng</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","MainAdmin")">Home</a></li>
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","DonHangAdmin")">Quản lý đơn hàng</a></li>
+            <li class="breadcrumb-item">Cập nhật thông tin</li>
+        </ol>
+    </div>
+
+    @using (Html.BeginForm("Edit", "DonHangAdmin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    <table style="width:90% ;margin:auto; background:white;">
+        <tr>
+            <td style="width:18%">Mã đơn hàng</td>
+            <td><input style="width:700px; float:left;" type="text" name="MaDonHang" value="@Model.MaDonHang" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:10px"></td>
+        </tr>
+        <tr>
+            <td style="width:18%">Id tài khoản</td>
+            <td><input style="width:700px; float:left;" type="text" value= "@Model.Id" readonly></td>
+           
+        </tr>
+        <tr>
+            <td colspan="2" style="height:10px"></td>
+        </tr>
+        <tr>
+            <td style="width:18%">Tên người nhận</td>
+            <td><input style="width:700px; float:left;" type="text" name="TenNguoiNhan" value="@Model.TenNguoiNhan" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:10px"></td>
+        </tr>
+        <tr>
+            <td style="width:18%">Số điện thoại liên hệ</td>
+            <td><input style="width:700px; float:left;" type="text" name="SoDienThoai" value="@Model.SoDienThoai" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:15px"></td>
+        </tr>
+        <tr>
+            <td style="width:18%">Địa chỉ</td>
+            <td><input style="width:700px; float:left;" type="text" name="DiaChiGiaoHang" value="@Model.DiaChiGiaoHang" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:15px"></td>
+        </tr>
+        <tr>
+            <td>Trạng thái đơn hàng</td>
+            <td>
+                <select id="tinhtrang" name="TrangThaiDonHang" style="width:700px; height:40px;border-radius:4px;" required>
+                    @if (Model.TrangThaiDonHang == 0)
+                    {
+                        <option value="0" selected>Chưa xác nhận</option>
+                        <option value="1">Đã xác nhận</option>
+                        <option value="2">Đã hủy</option>
+                    }
+                    else if (Model.TrangThaiDonHang == 1)
+                    {
+                        <option value="0">Chưa xác nhận</option>
+                        <option value="1" selected>Đã xác nhận</option>
+                        <option value="2">Đã hủy</option>
+                    }
+                    else if (Model.TrangThaiDonHang == 2)
+                    {
+                        <option value="0">Chưa xác nhận</option>
+                        <option value="1">Đã xác nhận</option>
+                        <option value="2" selected>Đã hủy</option>
+                    }
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:15px"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center"><h4>Thông tin sản phẩm: </h4></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:15px"></td>
+        </tr>
+        <tr>
+            <table style="width:75%; height:auto">
+                <tr>
+
+                    <th colspan="2" style="text-align:center">Sản Phẩm</th>
+                    <th style="text-align:center">Giá</th>
+                    <th style="text-align:center">Số lượng</th>
+                    <th style="text-align:center">Giảm giá</th>
+                    <th style="text-align:center">Tạm tính</th>
+
+                </tr>
+                @foreach (var item in TTTN_OnlineShop.Models.BUS.DonHangBUS.chiTiet(Model.MaDonHang))
+                {
+                    <tr>
+
+
+                        <td colspan="2" style="text-align:center">@TTTN_OnlineShop.Models.BUS.ShopOnlineBUS.ChiTiet(item.MaSanPham).TenSanPham</td>
+                        <td style="text-align:center">@item.Gia</td>
+                        <td style="text-align:center">@item.SoLuongMua</td>
+                        <td style="text-align:center"><img src="~/Assets/User/img/products/cosmetic/@TTTN_OnlineShop.Models.BUS.ShopOnlineBUS.ChiTiet(item.MaSanPham).HinhMinhHoa" width="100px" height="120px"></td>
+                        <td style="text-align:center">@(item.Gia * item.SoLuongMua)</td>
+
+                    </tr>
+                }
+                <tr>
+                    <td colspan="6" style="height:15px"></td>
+                </tr>
+                <tr>
+                    <th colspan="5" style="text-align:right">Tổng tiền: </th>
+                    <th style="text-align:center">@Model.ThanhTien.ToString("#,###,000" + " VNĐ")</th>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="submit" name="btnSuaDonHang" value="Cập nhật" />
+            </td>
+        </tr>
+</table>
+    }
+</body>
+</html>
+

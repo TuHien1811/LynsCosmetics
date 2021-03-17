@@ -1,0 +1,104 @@
+﻿@model LynsCosmetics_Connection.Table_DonHang
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="breadcrumb-area">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb-list">
+            <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li class="breadcrumb-item">@Html.ActionLink("Orders", "Index", "DonHang")</li>
+            <li class="breadcrumb-item active">Order Details</li>
+        </ol>
+    </div>
+</div>
+<div class="cart-main-area  ptb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <!-- Form Start -->
+                <form action="#">
+                    <!-- Table Content Start -->
+                    <div class="table-content table-responsive mb-45">
+                        <table>
+                            <tr>
+                                <th colspan="4" style="text-align:left"><h4>Chi tiết đơn hàng @Model.MaDonHang</h4></th>
+                                @if (@Model.TrangThaiDonHang == 0)
+                                {
+                                    <th colspan="2" style="text-align:left">Trạng thái đơn hàng: Chưa xác nhận </th>
+                                }
+                                else if (@Model.TrangThaiDonHang == 1)
+                                {
+                                    <th colspan="2" style="text-align:left">Trạng thái đơn hàng: Đã xác nhận </th>
+                                }
+                                else if (@Model.TrangThaiDonHang == 2)
+                                {
+                                    <th colspan="2" style="text-align:left">Trạng thái đơn hàng: Đã hủy </th>
+                                }
+
+                            </tr>
+                            <tr >
+                                <th colspan="2" style="text-align:left" >Thông tin người nhận</th>
+                                <th colspan="2" style="text-align:left" >Hình thức giao hàng</th>
+                                <th colspan="2" style="text-align:left" >Hình thức thanh toán</th>
+                            </tr>
+
+                            <tr >
+                                <td colspan="2" style="text-align:left" ><b>Họ tên người nhận:</b> @Model.TenNguoiNhan</td>
+                                <td colspan="2" style="text-align:left" >Vận chuyển bởi Viettel Post</td>
+                                <td colspan="2" style="text-align:left" >Thanh toán khi nhận hàng</td>
+                            </tr>
+                            <tr >
+                                <td colspan="2" style="text-align:left"><b>Địa chỉ giao hàng: </b>@Model.DiaChiGiaoHang</td>
+                                <td colspan="2" style="text-align:left">Phí vận chuyển: miễn phí</td>
+                                <td colspan="2" style="text-align:left"></td>
+                            </tr>
+                            <tr >
+                                <td colspan="2" style="text-align:left"><b>Số điện thoại liên hệ: </b>@Model.SoDienThoai</td>
+                                <th colspan="2"></th>
+                                <th colspan="2"></th>
+                            </tr>
+                            <tr >
+
+                                <th colspan="2">Sản Phẩm</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
+                                <th>Giảm giá</th>
+                                <th>Tạm tính</th>
+
+                            </tr>
+                            @foreach (var item in TTTN_OnlineShop.Models.BUS.DonHangBUS.chiTiet(Model.MaDonHang))
+                            {
+                        <tr>
+
+
+                            <td class="product-quantity" colspan="2">@TTTN_OnlineShop.Models.BUS.ShopOnlineBUS.ChiTiet(item.MaSanPham).TenSanPham</td>
+                            <td>@item.Gia</td>
+                            <td>@item.SoLuongMua</td>
+                            <td><img src="~/Assets/User/img/products/cosmetic/@TTTN_OnlineShop.Models.BUS.ShopOnlineBUS.ChiTiet(item.MaSanPham).HinhMinhHoa" width="100px" height="120px"></td>
+                            <td>@(item.Gia * item.SoLuongMua)</td>
+
+
+
+                        </tr>
+                            }
+                                <tr>
+                                    <th colspan="5" style="text-align:right">Tổng tiền: </th>
+                                    <th style="text-align:center">@Model.ThanhTien.ToString("#,###,000" + " VNĐ")</th>
+                                </tr>
+
+
+
+
+                            </table>
+                    </div>
+
+                </form>
+                <!-- Form End -->
+            </div>
+        </div>
+        <!-- Row End -->
+    </div>
+</div>
+
