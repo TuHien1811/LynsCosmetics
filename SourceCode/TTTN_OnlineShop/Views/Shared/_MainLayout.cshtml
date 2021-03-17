@@ -1,4 +1,4 @@
-﻿@model IEnumerable<LynsCosmetics_Connection.Table_GioHang>
+﻿@using Microsoft.AspNet.Identity;
 @{
     ViewBag.Title = "_MainLayout";
 }
@@ -42,7 +42,7 @@
 </head>
 
 <body class="template-color-1">
-   
+
     <!-- Main Wrapper Start Here -->
     <div class="wrapper">
 
@@ -154,62 +154,16 @@
                                     </li>
                                     <!-- Categorie Search Box End Here -->
                                     <li>
-                                        <a href="#">
-                                            <span class="pe-7s-shopbag"></span>
-                                            <span class="total-pro"></span>
-                                        </a>@Html.ActionLink("Cart", "Index", "GioHang")
-                                        <!--<ul class="ht-dropdown cart-box-width">
-                                            <li>-->
-                                                <!-- Cart Box Start -->
-                                                <!--foreach (var item in Model)
-                                                {
-                                                    <div class="single-cart-box">
-                                                        <div class="cart-img">
-                                                            <a href="#">
-                                                                <img src="~/Assets/User/img/products/cosmetic/item.HinhMinhHoa" alt="cart-image">
-                                                            </a>
-                                                            <span class="pro-quantity">x item.SoLuongMua</span>
-                                                        </div>
-                                                        <div class="cart-content">
-                                                            <h6>
-                                                                <a href="cart.html">item.TenSanPham </a>
-                                                            </h6>
-                                                            <span class="cart-price">item.GiaBan</span>
-                                                        </div>
-                                                        <a class="del-icone" href="#">
-                                                            <i class="ion-close"></i>
-                                                        </a>
-                                                    </div>
-                                                }-->
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            @Html.Partial("_CartList", TTTN_OnlineShop.Models.BUS.GioHangBUS.DanhSach(User.Identity.GetUserId()));
 
-                                                <!-- Cart Box End -->
-                                                <!-- Cart Footer Inner Start -->
-                                                <!--<div class="cart-footer">
-                                                    <ul class="price-content">
-                                                        <li>
-                                                            Subtotal
-                                                            <span>$57.95</span>
-                                                        </li>
-                                                        <li>
-                                                            Shipping
-                                                            <span>$7.00</span>
-                                                        </li>
-                                                        <li>
-                                                            Taxes
-                                                            <span>$0.00</span>
-                                                        </li>
-                                                        <li>
-                                                            Total
-                                                            <span>$64.95</span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="cart-actions text-center">
-                                                        <a class="cart-checkout" href="checkout.html">Checkout</a>
-                                                    </div>
-                                                </div>-->
-                                                <!-- Cart Footer Inner End -->
-                                            <!--</li>
-                                        </ul>-->
+                                        }
+                                        else
+                                        {
+                                            <span></span>
+                                        }
+
                                     </li>
                                 </ul>
                             </div>

@@ -31,7 +31,23 @@
                         </p>
                         <div class="pro-actions">
                             <div class="actions-primary">
-                                <a href="cart.html" class="add-to-cart" data-toggle="tooltip" data-original-title="Add to Cart">Add To Cart</a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    using (Html.BeginForm("Them", "GioHang", FormMethod.Post))
+                                    {
+                                        <input type="hidden" name="tenSanPham" value="@item.TenSanPham" />
+                                        <input type="hidden" name="maSanPham" value="@item.MaSanPham" />
+                                        <input type="hidden" name="hinhMinhHoa" value="@item.HinhMinhHoa" />
+                                        <input type="hidden" name="giaBan" value="@item.GiaBan" />
+                                        <input type="hidden" name="soLuongMua" value="1" />
+                                        @*<a href="@Url.Action("Index", "GioHang")" class="add-to-cart" data-toggle="tooltip" data-original-title="Add to Cart">Add To Cart</a>*@
+                                        <input type="submit" class="add-to-cart" data-toggle="tooltip" data-original-title="Add to Cart" value="Add to cart" />
+                                    }
+                                }
+                                else
+                                {
+                                    <span> Login to Add to Cart</span>
+                                }
                             </div>
                             <div class="actions-secondary">
                                 <div class="rating">

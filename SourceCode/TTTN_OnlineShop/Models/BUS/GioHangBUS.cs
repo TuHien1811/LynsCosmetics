@@ -86,42 +86,25 @@ namespace TTTN_OnlineShop.Models.BUS
 
             }
         }
-
-        public static void taoDonHang(string idTaiKhoan, string tenNguoiNhan, string soDienThoai, string diaChi)
+        public static void XoaCartList(string idTaiKhoan)
         {
-            int a = TongTien(idTaiKhoan);
-            using (var db = new LynsCosmetics_ConnectionDB())
-            {
-                Table_DonHang donHang = new Table_DonHang()
-                {
-                    Id = idTaiKhoan,
-                    TenNguoiNhan = tenNguoiNhan,
-                    SoDienThoai = soDienThoai,
-                    DiaChiGiaoHang = diaChi,
-                    NgayTao = DateTime.Today,
-                    ThanhTien = a,
-                    TrangThaiDonHang = 0   
-                };
-                db.Insert(donHang);
-            }      
-            
-        }
-        public static void taoChiTietDH(string idTaiKhoan)
-        {
-            using (var db = new LynsCosmetics_ConnectionDB())
-            {
-                var tamp = db.Query<Table_GioHang>("Select * from Table_GioHang Where Id = '" + idTaiKhoan + "'").SingleOrDefault();
-                Table_ChiTietDonHang chiTietDonHang = new Table_ChiTietDonHang()
-                {
-                    MaSanPham = tamp.MaSanPham,
-                    SoLuongMua = tamp.SoLuongMua,
-                    Gia = tamp.GiaBan
-                };
-                db.Insert(chiTietDonHang);
-            }
+            var db = new LynsCosmetics_ConnectionDB();
+            db.Execute("delete from Table_GioHang where Id ='" + idTaiKhoan + "'");
 
         }
 
+        public static void taoDH(Table_DonHang donHang)
+        {
+            var db = new LynsCosmetics_ConnectionDB();
+            db.Insert(donHang);
+        }
+        public static void taoChiTietDH(Table_ChiTietDonHang chiTietDonHang)
+        {
+            var db = new LynsCosmetics_ConnectionDB();
+            db.Insert(chiTietDonHang);
+        }
+
+        
     }
 }
 

@@ -3124,6 +3124,8 @@
     <Content Include="Views\GioHang\Index.cshtml" />
     <Content Include="Views\Shared\_GioHang.cshtml" />
     <Content Include="Views\ThanhToan\Index.cshtml" />
+    <Content Include="Views\Shared\_CartList.cshtml" />
+    <Content Include="Views\ThanhToan\Successful.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
