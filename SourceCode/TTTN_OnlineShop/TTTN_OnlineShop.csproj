@@ -189,6 +189,7 @@
     <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Controllers\ThanhToanController.cs" />
     <Compile Include="Controllers\ThuongHieuController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\TinTucController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -199,6 +200,7 @@
     <Compile Include="Models\BUS\GioHangBUS.cs" />
     <Compile Include="Models\BUS\ShopOnlineBUS.cs" />
     <Compile Include="Models\BUS\ThuongHieuBUS.cs" />
+    <Compile Include="Models\BUS\TimKiemBUS.cs" />
     <Compile Include="Models\BUS\TinTucBUS.cs" />
     <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>
@@ -3086,6 +3088,7 @@
     <Content Include="Views\TinTuc\Details.cshtml" />
     <Content Include="Views\Shared\_LastestBlog.cshtml" />
     <Content Include="Views\Shared\_RecentBlog.cshtml" />
+    <Content Include="Views\TimKiem\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
