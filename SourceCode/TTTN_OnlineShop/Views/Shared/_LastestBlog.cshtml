@@ -1,0 +1,60 @@
+﻿@model IEnumerable<LynsCosmetics_Connection.Table_TinTuc>
+<div class="blog-area ptb-90">
+    <div class="container">
+        <div class="main-blog-area">
+            <!-- Section Title Start -->
+            <div class="section-title text-center">
+                <h2>Latest Blog Posts</h2>
+                <p>There are latest blog posts </p>
+            </div>
+            <!-- Section Title End -->
+            <!-- Blog Activation Start -->
+            <div class="blog-activation owl-carousel">
+                <!-- Single Blog Start -->
+                @foreach (var item in Model)
+                {
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="@Url.Action("Details","TinTuc",new {id = item.MaTinTuc})">
+                                <img src="~/Assets/User/img/tintuc/@item.AnhBia" alt="blog-img">
+                            </a>
+                            <div class="entry-meta">
+                                <div class="date">
+                                    <p>@item.NgayDang.Day</p>
+                                    <span>@item.NgayDang.AddMonths(0).ToString("MMM")</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h4>
+                                <a href="@Url.Action("Details","TinTuc",new {id = item.MaTinTuc})">@item.TieuDe</a>
+                            </h4>
+                            <ul class="meta-box">
+                                <li class="meta-date">
+                                    <span>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>@item.NgayDang.ToLongDateString()
+                                    </span>
+                                </li>
+                                <p>
+                                    <li>
+                                        <i class="fa fa-user" aria-hidden="true"></i><a href="#">By Lyn's Cosmetics</a>
+                                    </li>
+                                </p>
+
+                            </ul>
+                            <div class="makali-btn transparent-btn grey-border">
+                                <a href="@Url.Action("Details","TinTuc",new {id = item.MaTinTuc})">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <!-- Single Blog End -->
+
+            </div>
+            <!-- Blog Activation End -->
+        </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Blog Area End Here -->

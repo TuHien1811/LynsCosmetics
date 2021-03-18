@@ -1,0 +1,149 @@
+﻿@model LynsCosmetics_Connection.Table_TinTuc
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+        <!-- Breadcrumb Area Start Here -->
+        <div class="breadcrumb-area">
+            <div class="container">
+                <ol class="breadcrumb breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+                    <li class="breadcrumb-item"><a href="@Url.Action("Index","TinTuc")">blog</a></li>
+                    <li class="breadcrumb-item active">Blog Details</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Breadcrumb Area End Here -->
+        <!-- Blog Details Area Start -->
+        <div class="blog-details-area white-bg ptb-90">
+            <div class="container">
+                <div class="row">
+                    <!-- Blog Details Start -->
+                    <div class="col-xl-9 col-lg-8">
+                        <div class="blog-details mb-all-40">
+                            <div class="blog-hero-img mb-40">
+                                <img class="full-img" src="~/Assets/User/img/tintuc/@Model.AnhTinTuc" alt="blog-details">
+                                <div class="entry-meta">
+                                    <div class="date">
+                                        <p>@Model.NgayDang.Day</p>
+                                        <span>@Model.NgayDang.AddMonths(0).ToString("MMM")</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-upper-portion">
+                                <h3 class="blog-dtl-header portfolio-header">@Model.TieuDe</h3>
+                                <ul class="meta-box meta-blog d-flex">
+                                    <li class="meta-date">
+                                        <span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>@Model.NgayDang.ToLongDateString()
+                                        </span>
+                                    </li>
+                                    <li><i class="fa fa-user" aria-hidden="true"></i>By <a href="#"> Lyn's Cosmetics</a></li>
+                                </ul>
+                                <p class="mb-20">
+                                    @Html.Raw(Model.NoiDung)
+                                </p>
+
+                            </div>
+                            <!-- Comment Area Start -->
+                            <!--<div class="comments-area ptb-90">
+                <h3 class="sidebar-header">comments</h3>-->
+                            <!-- Single Comment Start -->
+                            <!--<div class="single-comment">
+                <div class="comment-img">
+                    <img src="img/blog/blg8.png" alt="comment-img">
+                </div>
+                <div class="comment-desc">
+                    <div class="comment-upper d-flex justify-content-between align-items-center">
+                        <div class="comment-title">
+                            <h6><a href="#">robert skue</a></h6>
+                            <span>08 Jun 2017</span>
+                        </div>
+                        <div class="comment-reply">
+                            <a href="#">reply</a>
+                        </div>
+                    </div>
+                    <p>
+                        But I must explain to you how all this mistaken idea of denouncing pleasure
+                        and ising pain borand I will give you a complete account of the system
+                    </p>
+                </div>
+            </div>-->
+                            <!-- Single Comment End -->
+                            <!-- Single Comment Start -->
+                            <!--<div class="single-comment reply-comment">
+                <div class="comment-img">
+                    <img src="img/blog/blg9.png" alt="comment-img">
+                </div>
+                <div class="comment-desc">
+                    <div class="comment-upper d-flex justify-content-between align-items-center">
+                        <div class="comment-title">
+                            <h6><a href="#">rio Santos</a></h6>
+                            <span>08 Jun 2017</span>
+                        </div>
+                        <div class="comment-reply">
+                            <a href="#">reply</a>
+                        </div>
+                    </div>
+                    <p>
+                        But I must explain to you how all this mistaken idea this of denounng
+                        pleasure and ising pain idea borand I will give you a complete
+                    </p>
+                </div>
+            </div>-->
+                            <!-- Single Comment End -->
+                            <!-- Single Comment Start -->
+                            <!--<div class="single-comment">
+                <div class="comment-img">
+                    <img src="img/blog/blg10.png" alt="comment-img">
+                </div>
+                <div class="comment-desc">
+                    <div class="comment-upper d-flex justify-content-between align-items-center">
+                        <div class="comment-title">
+                            <h6><a href="#">steven Santos</a></h6>
+                            <span>08 Jun 2017</span>
+                        </div>
+                        <div class="comment-reply">
+                            <a href="#">reply</a>
+                        </div>
+                    </div>
+                    <p>
+                        But I must explain to you how all this mistaken idea of denouncing pleasure
+                        and ising pain borand I will give you a complete account of the system
+                    </p>
+                </div>
+            </div>-->
+                            <!-- Single Comment End -->
+                            <!--</div>-->
+                            <!-- Comment Area End -->
+                            <!-- Blog Deatils Contact Start -->
+                            <div class="blog-detail-contact">
+                                <h3 class="mb-45 sidebar-header contact-header">Leave a Reply</h3>
+                                <div class="submit-review">
+                                    <form class="row">
+                                        <div class="form-group col-sm-6">
+                                            <input class="form-control" placeholder="Name" type="text">
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <input class="form-control" placeholder="Email" type="email">
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <textarea class="form-control" placeholder="Message"></textarea>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input value="send now" class="login-btn" type="submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Blog Deatils Contact End -->
+                        </div>
+                    </div>
+                    <!-- Blog Details End -->
+                    @Html.Partial("_RecentBlog", TTTN_OnlineShop.Models.BUS.TinTucBUS.RecentBlog(Model.MaTinTuc))
+                </div>
+            </div>
+        </div>
+        <!-- Blog Details Area End -->
+

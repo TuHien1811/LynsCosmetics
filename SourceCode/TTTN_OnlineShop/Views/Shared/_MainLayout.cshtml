@@ -73,17 +73,14 @@
                         <div class="col-xl-7 col-lg-8 d-none d-lg-block position-static">
                             <nav>
                                 <ul class="header-bottom-list d-flex justify-content-start">
-                                    <li>
-                                        @Html.ActionLink("Home", "Index", "Home")
-
-                                    </li>
-                                    @Html.Partial("_ThuongHieu", TTTN_OnlineShop.Models.BUS.ThuongHieuBUS.Danhsach())
-                                    @Html.Partial("_DanhMuc", TTTN_OnlineShop.Models.BUS.DanhMucBUS.Danhsach())
+                                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                    <li>@Html.Partial("_ThuongHieu", TTTN_OnlineShop.Models.BUS.ThuongHieuBUS.Danhsach())</li>
+                                    <li>@Html.Partial("_DanhMuc", TTTN_OnlineShop.Models.BUS.DanhMucBUS.Danhsach())</li>
                                     <li>
                                         @Html.ActionLink("Shop", "Index", "Shop")
                                     </li>
                                     <li>
-                                        <a href="#">Blog</a>
+                                        @Html.ActionLink("Blog", "Index", "TinTuc")
                                     </li>
                                     <li>
                                         @Html.ActionLink("My Orders", "Index", "DonHang")

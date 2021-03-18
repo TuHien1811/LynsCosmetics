@@ -1,0 +1,30 @@
+﻿@model IEnumerable<LynsCosmetics_Connection.Table_TinTuc>
+<!-- Blog Sidebar Start -->
+<div class="col-xl-3 col-lg-4">
+    <div class="blog-sidebar right-sidebar mt-all-80">
+        <!-- Recent Post Start -->
+        
+        <div class="recent-post mb-60">
+            <h3 class="sidebar-header">recent posts</h3>
+            @foreach (var item in Model)
+            {
+                <div class="all-recent-post">
+
+                    <div class="single-recent-post">
+                        <div class="recent-img">
+                            <a href="@Url.Action("Details","TinTuc",new {id = item.MaTinTuc})"><img src="~/Assets/User/img/tintuc/@item.AnhBia" alt="blog-img"></a>
+                        </div>
+                        <div class="recent-desc">
+                            <h6><b><a href="@Url.Action("Details","TinTuc",new {id = item.MaTinTuc})">@item.TieuDe</a></b></h6>
+                            <span>@item.NgayDang.ToLongDateString()</span>
+                        </div>
+                        --------------------------------------------------
+                    </div>
+                </div>
+            }
+            </div>
+        
+        <!-- Recent Post End -->
+    </div>
+</div>
+<!-- Blog Sidebar End -->

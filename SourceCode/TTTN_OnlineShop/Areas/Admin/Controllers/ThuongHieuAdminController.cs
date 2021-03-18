@@ -50,7 +50,7 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
                     }
                 }
                     // TODO: Add insert logic here
-                    ThuongHieuBUS.themThuongHieu(thuongHieu);
+                ThuongHieuBUS.themThuongHieu(thuongHieu);
                 return RedirectToAction("Index");
             }
             catch

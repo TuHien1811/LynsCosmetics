@@ -801,5 +801,65 @@ namespace LynsCosmetics_Connection
 
 	}
 
+    
+
+	[TableName("dbo.Table_TinTuc")]
+
+
+
+	[PrimaryKey("MaTinTuc")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class Table_TinTuc : LynsCosmetics_ConnectionDB.Record<Table_TinTuc>  
+    {
+
+
+
+		[Column] public int MaTinTuc { get; set; }
+
+
+
+
+
+		[Column] public string TieuDe { get; set; }
+
+
+
+
+
+		[Column] public string AnhBia { get; set; }
+
+
+
+
+
+		[Column] public string AnhTinTuc { get; set; }
+
+
+
+
+
+		[Column] public string NoiDung { get; set; }
+
+
+
+
+
+		[Column] public DateTime NgayDang { get; set; }
+
+
+
+
+
+		[Column] public int TinhTrangTT { get; set; }
+
+
+
+	}
+
 
 }

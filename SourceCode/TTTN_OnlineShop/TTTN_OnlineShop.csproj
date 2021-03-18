@@ -179,6 +179,7 @@
     <Compile Include="Areas\Admin\Controllers\MainAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThuongHieuAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TinTucAdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DanhMucController.cs" />
     <Compile Include="Controllers\DonHangController.cs" />
@@ -188,6 +189,7 @@
     <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Controllers\ThanhToanController.cs" />
     <Compile Include="Controllers\ThuongHieuController.cs" />
+    <Compile Include="Controllers\TinTucController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,6 +199,7 @@
     <Compile Include="Models\BUS\GioHangBUS.cs" />
     <Compile Include="Models\BUS\ShopOnlineBUS.cs" />
     <Compile Include="Models\BUS\ThuongHieuBUS.cs" />
+    <Compile Include="Models\BUS\TinTucBUS.cs" />
     <Compile Include="Models\Generated\Database.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2665,70 +2668,6 @@
     <Content Include="Assets\User\img\banner\cosmetic\banner2.jpg" />
     <Content Include="Assets\User\img\banner\cosmetic\banner3.jpg" />
     <Content Include="Assets\User\img\banner\cosmetic\banner_shop.jpg" />
-    <Content Include="Assets\User\img\blog\bg-1.jpg" />
-    <Content Include="Assets\User\img\blog\blg1.jpg" />
-    <Content Include="Assets\User\img\blog\blg10.png" />
-    <Content Include="Assets\User\img\blog\blg11.png" />
-    <Content Include="Assets\User\img\blog\blg12.jpg" />
-    <Content Include="Assets\User\img\blog\blg13.jpg" />
-    <Content Include="Assets\User\img\blog\blg14.jpg" />
-    <Content Include="Assets\User\img\blog\blg15.jpg" />
-    <Content Include="Assets\User\img\blog\blg16.jpg" />
-    <Content Include="Assets\User\img\blog\blg17.jpg" />
-    <Content Include="Assets\User\img\blog\blg18.jpg" />
-    <Content Include="Assets\User\img\blog\blg19.jpg" />
-    <Content Include="Assets\User\img\blog\blg2.jpg" />
-    <Content Include="Assets\User\img\blog\blg20.jpg" />
-    <Content Include="Assets\User\img\blog\blg21.jpg" />
-    <Content Include="Assets\User\img\blog\blg22.jpg" />
-    <Content Include="Assets\User\img\blog\blg23.jpg" />
-    <Content Include="Assets\User\img\blog\blg24.jpg" />
-    <Content Include="Assets\User\img\blog\blg25.jpg" />
-    <Content Include="Assets\User\img\blog\blg26.jpg" />
-    <Content Include="Assets\User\img\blog\blg27.jpg" />
-    <Content Include="Assets\User\img\blog\blg28.jpg" />
-    <Content Include="Assets\User\img\blog\blg29.jpg" />
-    <Content Include="Assets\User\img\blog\blg3.jpg" />
-    <Content Include="Assets\User\img\blog\blg30.jpg" />
-    <Content Include="Assets\User\img\blog\blg31.jpg" />
-    <Content Include="Assets\User\img\blog\blg32.jpg" />
-    <Content Include="Assets\User\img\blog\blg33.jpg" />
-    <Content Include="Assets\User\img\blog\blg34.jpg" />
-    <Content Include="Assets\User\img\blog\blg35.jpg" />
-    <Content Include="Assets\User\img\blog\blg36.jpg" />
-    <Content Include="Assets\User\img\blog\blg37.jpg" />
-    <Content Include="Assets\User\img\blog\blg38.jpg" />
-    <Content Include="Assets\User\img\blog\blg39.jpg" />
-    <Content Include="Assets\User\img\blog\blg4.jpg" />
-    <Content Include="Assets\User\img\blog\blg40.jpg" />
-    <Content Include="Assets\User\img\blog\blg41.jpg" />
-    <Content Include="Assets\User\img\blog\blg42.jpg" />
-    <Content Include="Assets\User\img\blog\blg43.jpg" />
-    <Content Include="Assets\User\img\blog\blg44.jpg" />
-    <Content Include="Assets\User\img\blog\blg45.jpg" />
-    <Content Include="Assets\User\img\blog\blg46.jpg" />
-    <Content Include="Assets\User\img\blog\blg47.jpg" />
-    <Content Include="Assets\User\img\blog\blg48.jpg" />
-    <Content Include="Assets\User\img\blog\blg49.jpg" />
-    <Content Include="Assets\User\img\blog\blg5.jpg" />
-    <Content Include="Assets\User\img\blog\blg50.jpg" />
-    <Content Include="Assets\User\img\blog\blg51.jpg" />
-    <Content Include="Assets\User\img\blog\blg53.jpg" />
-    <Content Include="Assets\User\img\blog\blg54.jpg" />
-    <Content Include="Assets\User\img\blog\blg55.jpg" />
-    <Content Include="Assets\User\img\blog\blg56.jpg" />
-    <Content Include="Assets\User\img\blog\blg57.jpg" />
-    <Content Include="Assets\User\img\blog\blg58.jpg" />
-    <Content Include="Assets\User\img\blog\blg59.jpg" />
-    <Content Include="Assets\User\img\blog\blg6.jpg" />
-    <Content Include="Assets\User\img\blog\blg60.jpg" />
-    <Content Include="Assets\User\img\blog\blg61.jpg" />
-    <Content Include="Assets\User\img\blog\blg62.jpg" />
-    <Content Include="Assets\User\img\blog\blg63.jpg" />
-    <Content Include="Assets\User\img\blog\blg64.jpg" />
-    <Content Include="Assets\User\img\blog\blg7.jpg" />
-    <Content Include="Assets\User\img\blog\blg8.png" />
-    <Content Include="Assets\User\img\blog\blg9.png" />
     <Content Include="Assets\User\img\brand\section-bg-2.png" />
     <Content Include="Assets\User\img\brand\section-bg-3.png" />
     <Content Include="Assets\User\img\brand\section-bg-4.png" />
@@ -2796,6 +2735,14 @@
     <Content Include="Assets\User\img\slider\cosmetic\3-2.jpg" />
     <Content Include="Assets\User\img\slider\cosmetic\4-1.jpg" />
     <Content Include="Assets\User\img\slider\cosmetic\4-2.jpg" />
+    <Content Include="Assets\User\img\tintuc\1.jpg" />
+    <Content Include="Assets\User\img\tintuc\2.jpg" />
+    <Content Include="Assets\User\img\tintuc\3.jpg" />
+    <Content Include="Assets\User\img\tintuc\4.jpg" />
+    <Content Include="Assets\User\img\tintuc\5.jpg" />
+    <Content Include="Assets\User\img\tintuc\6.jpg" />
+    <Content Include="Assets\User\img\tintuc\7.jpg" />
+    <Content Include="Assets\User\img\tintuc\8.jpg" />
     <Content Include="Assets\User\js\ajax-mail.js" />
     <Content Include="Assets\User\js\bootstrap.min.js" />
     <Content Include="Assets\User\js\jquery-ui.min.js" />
@@ -3070,6 +3017,9 @@
     <Content Include="Areas\Admin\Views\Shared\_MainLayoutAdmin.cshtml" />
     <Content Include="Areas\Admin\Views\DonHangAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\DonHangAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\TinTucAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TinTucAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TinTucAdmin\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -3132,6 +3082,10 @@
     <Content Include="Views\Shared\_CartList.cshtml" />
     <Content Include="Views\DonHang\Index.cshtml" />
     <Content Include="Views\DonHang\Details.cshtml" />
+    <Content Include="Views\TinTuc\Index.cshtml" />
+    <Content Include="Views\TinTuc\Details.cshtml" />
+    <Content Include="Views\Shared\_LastestBlog.cshtml" />
+    <Content Include="Views\Shared\_RecentBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

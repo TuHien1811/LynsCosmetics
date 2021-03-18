@@ -1,0 +1,89 @@
+﻿@model PagedList.IPagedList<LynsCosmetics_Connection.Table_TinTuc>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<!-- Breadcrumb Area Start Here -->
+<div class="breadcrumb-area">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb-list">
+            <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+            <li class="breadcrumb-item active">Blog</li>
+        </ol>
+    </div>
+</div>
+<!-- Breadcrumb Area End Here -->
+<!-- Blog Area Start Here -->
+<div class="blog-area pt-90 pb-90">
+    <div class="container">
+        <!-- Section Title Start -->
+        <div class="section-title text-center">
+            <h2>Latest Blog Posts</h2>
+            <p>There are latest blog posts </p>
+        </div>
+        <!-- Section Title End -->
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 mb-40">
+                    <!-- Single Blog Start -->
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="@Url.Action("Details",new {id = item.MaTinTuc})">
+                                <img src="~/Assets/User/img/tintuc/@item.AnhBia" alt="blog-img">
+                            </a>
+                            <div class="entry-meta">
+                                <div class="date">
+                                    <p>@item.NgayDang.Day</p>
+                                    <span>@item.NgayDang.AddMonths(0).ToString("MMM")</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h4>
+                                <a href="@Url.Action("Details",new {id = item.MaTinTuc})">@item.TieuDe</a>
+                            </h4>
+                            <ul class="meta-box">
+                                <li class="meta-date">
+                                    <span>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>@item.NgayDang.ToLongDateString()
+                                    </span>
+                                </li>
+                                <p>
+                                <li>
+                                    <i class="fa fa-user" aria-hidden="true"></i><a href="#">By Lyn's Cosmetics</a>
+                                </li>
+                                </p>
+                            </ul>
+                            <div class="small-btn">
+                                <a href="@Url.Action("Details",new {id = item.MaTinTuc})">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Blog End -->
+                </div>
+            }
+
+        </div>
+        <!-- Shop Breadcrumb Area Start -->
+        <div class="shop-breadcrumb-area border-default mt-30">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-5">
+                    <span class="show-items">Showing @Model.Count items of results </span>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-7">
+                    <ul class="pfolio-breadcrumb-list text-center">
+                        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Shop Breadcrumb Area End -->
+    </div>
+    </div>
+    <!-- Container End -->
+</div>
+<!-- Blog Area End Here -->
