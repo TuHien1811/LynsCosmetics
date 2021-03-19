@@ -62,6 +62,7 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
             {
                 // TODO: Add update logic here
                 donHang.Id = tamp.Id;
+                donHang.TenTaiKhoan = tamp.TenTaiKhoan;
                 donHang.TenNguoiNhan = tamp.TenNguoiNhan;
                 donHang.SoDienThoai = tamp.SoDienThoai;
                 donHang.DiaChiGiaoHang = tamp.DiaChiGiaoHang;

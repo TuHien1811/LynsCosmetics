@@ -18,9 +18,11 @@ namespace TTTN_OnlineShop.Controllers
         }
 
         // GET: TinTuc/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int id,int page=1, int pagesize=3)
         {
             var db = TinTucBUS.ChiTiet(id);
+            ViewBag.page = page;
+            ViewBag.pagesize = pagesize;
             return View(db);
         }
 

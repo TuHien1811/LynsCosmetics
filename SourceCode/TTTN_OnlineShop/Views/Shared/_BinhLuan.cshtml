@@ -1,0 +1,24 @@
+﻿@model PagedList.IPagedList<LynsCosmetics_Connection.Table_BinhLuan>
+@using PagedList.Mvc;
+<!--Comment Area Start*-->
+<div class="comments-area ptb-90">
+    <h3 class="sidebar-header">Comments</h3>
+    @foreach (var item in Model)
+    {
+        <div class="single-comment">
+            <div class="comment-desc">
+                <div class="comment-upper d-flex justify-content-between align-items-center">
+                    <div class="comment-title">
+                        <h6><a href="#">@item.TenTaiKhoan</a></h6>
+                        <span>@item.NgayDang.ToLongDateString()</span>
+                    </div>
+                </div>
+                <p>
+                    @item.NoiDung
+                </p>
+            </div>
+        </div>
+    }
+    @Html.PagedListPager(Model, page => Url.Action("Details/" + Model.ElementAt(0).MaTinTuc, new { page }))
+</div>
+<!--Comment Area End-->

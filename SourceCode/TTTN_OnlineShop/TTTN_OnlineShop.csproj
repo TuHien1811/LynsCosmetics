@@ -181,6 +181,7 @@
     <Compile Include="Areas\Admin\Controllers\ThuongHieuAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\TinTucAdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BinhLuanController.cs" />
     <Compile Include="Controllers\DanhMucController.cs" />
     <Compile Include="Controllers\DonHangController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
@@ -195,6 +196,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BUS\BinhLuanBUS.cs" />
     <Compile Include="Models\BUS\DanhMucBUS.cs" />
     <Compile Include="Models\BUS\DonHangBUS.cs" />
     <Compile Include="Models\BUS\GioHangBUS.cs" />
@@ -2660,7 +2662,7 @@
     <Content Include="Assets\User\css\owl.video.play.png" />
     <Content Include="Assets\User\css\pe-icon-7-stroke.min.css" />
     <Content Include="Assets\User\css\responsive.css" />
-    <Content Include="Assets\User\css\style.css" />
+    <Content Include="Assets\User\css\stylecss.css" />
     <Content Include="Assets\User\fonts\fontawesome-webfont3e6e.svg" />
     <Content Include="Assets\User\fonts\Pe-icon-7-strokebb1d.svg" />
     <Content Include="Assets\User\img\about-us\1.png" />
@@ -3089,10 +3091,12 @@
     <Content Include="Views\Shared\_LastestBlog.cshtml" />
     <Content Include="Views\Shared\_RecentBlog.cshtml" />
     <Content Include="Views\TimKiem\index.cshtml" />
+    <Content Include="Views\Shared\_BinhLuan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Views\BinhLuan\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

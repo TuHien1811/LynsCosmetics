@@ -30,6 +30,7 @@ namespace TTTN_OnlineShop.Controllers
             try
             {
                 donHang.Id = User.Identity.GetUserId();
+                donHang.TenTaiKhoan = User.Identity.Name;
                 donHang.NgayTao = DateTime.Now;
                 donHang.ThanhTien = GioHangBUS.TongTien(User.Identity.GetUserId());
                 donHang.TrangThaiDonHang = 0;

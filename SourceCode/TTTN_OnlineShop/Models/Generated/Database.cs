@@ -445,6 +445,66 @@ namespace LynsCosmetics_Connection
 
     
 
+	[TableName("dbo.Table_BinhLuan")]
+
+
+
+	[PrimaryKey("MaBinhLuan")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class Table_BinhLuan : LynsCosmetics_ConnectionDB.Record<Table_BinhLuan>  
+    {
+
+
+
+		[Column] public int MaBinhLuan { get; set; }
+
+
+
+
+
+		[Column] public int MaTinTuc { get; set; }
+
+
+
+
+
+		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public string TenTaiKhoan { get; set; }
+
+
+
+
+
+		[Column] public string NoiDung { get; set; }
+
+
+
+
+
+		[Column] public DateTime NgayDang { get; set; }
+
+
+
+
+
+		[Column] public int TinhTrang { get; set; }
+
+
+
+	}
+
+    
+
 	[TableName("dbo.Table_ChiTietDonHang")]
 
 
@@ -544,6 +604,12 @@ namespace LynsCosmetics_Connection
 
 
 		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public string TenTaiKhoan { get; set; }
 
 
 

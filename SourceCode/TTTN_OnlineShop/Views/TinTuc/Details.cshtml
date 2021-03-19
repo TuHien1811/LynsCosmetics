@@ -46,98 +46,39 @@
                                 </p>
 
                             </div>
-                            <!-- Comment Area Start -->
-                            <!--<div class="comments-area ptb-90">
-                <h3 class="sidebar-header">comments</h3>-->
-                            <!-- Single Comment Start -->
-                            <!--<div class="single-comment">
-                <div class="comment-img">
-                    <img src="img/blog/blg8.png" alt="comment-img">
-                </div>
-                <div class="comment-desc">
-                    <div class="comment-upper d-flex justify-content-between align-items-center">
-                        <div class="comment-title">
-                            <h6><a href="#">robert skue</a></h6>
-                            <span>08 Jun 2017</span>
-                        </div>
-                        <div class="comment-reply">
-                            <a href="#">reply</a>
-                        </div>
-                    </div>
-                    <p>
-                        But I must explain to you how all this mistaken idea of denouncing pleasure
-                        and ising pain borand I will give you a complete account of the system
-                    </p>
-                </div>
-            </div>-->
-                            <!-- Single Comment End -->
-                            <!-- Single Comment Start -->
-                            <!--<div class="single-comment reply-comment">
-                <div class="comment-img">
-                    <img src="img/blog/blg9.png" alt="comment-img">
-                </div>
-                <div class="comment-desc">
-                    <div class="comment-upper d-flex justify-content-between align-items-center">
-                        <div class="comment-title">
-                            <h6><a href="#">rio Santos</a></h6>
-                            <span>08 Jun 2017</span>
-                        </div>
-                        <div class="comment-reply">
-                            <a href="#">reply</a>
-                        </div>
-                    </div>
-                    <p>
-                        But I must explain to you how all this mistaken idea this of denounng
-                        pleasure and ising pain idea borand I will give you a complete
-                    </p>
-                </div>
-            </div>-->
-                            <!-- Single Comment End -->
-                            <!-- Single Comment Start -->
-                            <!--<div class="single-comment">
-                <div class="comment-img">
-                    <img src="img/blog/blg10.png" alt="comment-img">
-                </div>
-                <div class="comment-desc">
-                    <div class="comment-upper d-flex justify-content-between align-items-center">
-                        <div class="comment-title">
-                            <h6><a href="#">steven Santos</a></h6>
-                            <span>08 Jun 2017</span>
-                        </div>
-                        <div class="comment-reply">
-                            <a href="#">reply</a>
-                        </div>
-                    </div>
-                    <p>
-                        But I must explain to you how all this mistaken idea of denouncing pleasure
-                        and ising pain borand I will give you a complete account of the system
-                    </p>
-                </div>
-            </div>-->
-                            <!-- Single Comment End -->
-                            <!--</div>-->
-                            <!-- Comment Area End -->
+                            <ul class="meta-box meta-blog d-flex">
+                            </ul>
+
+                            <br />
+                            <br />
+
+
                             <!-- Blog Deatils Contact Start -->
                             <div class="blog-detail-contact">
                                 <h3 class="mb-45 sidebar-header contact-header">Leave a Reply</h3>
                                 <div class="submit-review">
-                                    <form class="row">
-                                        <div class="form-group col-sm-6">
-                                            <input class="form-control" placeholder="Name" type="text">
-                                        </div>
-                                        <div class="form-group col-sm-6">
-                                            <input class="form-control" placeholder="Email" type="email">
-                                        </div>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                    <form class="row" action="~/BinhLuan/Create">
+                                        <input type="hidden" name="MaTinTuc" value="@Model.MaTinTuc" />
                                         <div class="form-group col-sm-12">
-                                            <textarea class="form-control" placeholder="Message"></textarea>
+                                            <textarea class="form-control" placeholder="Message here...." name="NoiDung"></textarea>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input value="send now" class="login-btn" type="submit">
+                                            <input value="Send now" class="login-btn" type="submit">
                                         </div>
                                     </form>
+                                    }
+                                    else
+                                    {
+                                        <p>Vui lòng đăng nhập để bình luận</p>
+                                    }
                                 </div>
                             </div>
                             <!-- Blog Deatils Contact End -->
+                            @{ int page = ViewBag.page;
+                               int pagesize = ViewBag.pagesize; }
+                            @Html.Partial("_BinhLuan", TTTN_OnlineShop.Models.BUS.BinhLuanBUS.LoadBinhLuan(page, pagesize))
                         </div>
                     </div>
                     <!-- Blog Details End -->
