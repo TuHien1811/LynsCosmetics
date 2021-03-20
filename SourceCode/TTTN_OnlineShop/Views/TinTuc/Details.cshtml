@@ -78,7 +78,7 @@
                             <!-- Blog Deatils Contact End -->
                             @{ int page = ViewBag.page;
                                int pagesize = ViewBag.pagesize; }
-                            @Html.Partial("_BinhLuan", TTTN_OnlineShop.Models.BUS.BinhLuanBUS.LoadBinhLuan(page, pagesize))
+                            @Html.Partial("_BinhLuan", TTTN_OnlineShop.Models.BUS.BinhLuanBUS.LoadBinhLuan(Model.MaTinTuc,page, pagesize))
                         </div>
                     </div>
                     <!-- Blog Details End -->
