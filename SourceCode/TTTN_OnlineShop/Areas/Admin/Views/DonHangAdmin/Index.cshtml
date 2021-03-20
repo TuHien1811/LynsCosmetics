@@ -43,6 +43,22 @@
 
     <table>
         <tr>
+            <th colspan="2">
+                <form class="navbar-search" action="@Url.Action("Index", "SearchOrderAd")">
+                    <div class="input-group" style="margin:auto; margin-top: 15px">
+                        <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
+                               aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;" name="timKiem">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </th>
+            <th colspan="4"></th>
+        </tr>
+        <tr>
             <th>Mã đơn hàng</th>
             <th>Tài khoản</th>
             <th>Ngày tạo </th>
@@ -52,30 +68,26 @@
         </tr>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>@item.MaDonHang</td>
-                <td>@item.TenTaiKhoan</td>
-                <td>@item.NgayTao</td>
-                <td>@item.ThanhTien.ToString("#,###,000" + "VNĐ")</td>
-                @if (item.TrangThaiDonHang == 0)
-                {
-                    <td>Chưa xác nhận</td>
-                }
-                else if (item.TrangThaiDonHang == 1)
-                {
-                    <td>Đã xác nhận</td>
-                }
-                else if (item.TrangThaiDonHang == 2)
-                {
-                    <td>Đã hủy</td>
-                }
-                <td>
-                    <a href="@Url.Action("Edit","DonHangAdmin", new { id=item.MaDonHang})">
-                        <img src="~/Assets/Admin/img/logo/Edit_icon.png" />
-                    </a>
-                </td>
-            </tr>
-        }
+    <tr>
+        <td>@item.MaDonHang</td>
+        <td>@item.TenTaiKhoan</td>
+        <td>@item.NgayTao</td>
+        <td>@item.ThanhTien.ToString("#,###,000" + "VNĐ")</td>
+        @if (item.TrangThaiDonHang == 0)
+        {
+    <td>Chưa xác nhận</td> }
+                    else if (item.TrangThaiDonHang == 1)
+                    {
+    <td>Đã xác nhận</td> }
+                    else if (item.TrangThaiDonHang == 2)
+                    {
+    <td>Đã hủy</td>                }
+        <td>
+            <a href="@Url.Action("Edit","DonHangAdmin", new { id=item.MaDonHang})">
+                <img src="~/Assets/Admin/img/logo/Edit_icon.png" />
+            </a>
+        </td>
+    </tr>}
 
 
     </table>

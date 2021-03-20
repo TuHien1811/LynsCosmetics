@@ -13,9 +13,18 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
     {
         [Authorize(Roles = "Admin")]
         // GET: Admin/TinTucAdmin
-        public ActionResult Index(int page = 1, int pagesize = 8)
+        public ActionResult Index(string timKiem, int page = 1, int pagesize = 8)
         {
             var ds = TinTucBUS.DanhsachFull().ToPagedList(page, pagesize);
+            if (timKiem == "")
+            {
+                return View(ds);
+            }
+            else if (timKiem != "")
+            {
+                var db = TimKiemBUS.TimKiemTT(timKiem).ToPagedList(page, pagesize);
+                return View(db);
+            }
             return View(ds);
         }
 

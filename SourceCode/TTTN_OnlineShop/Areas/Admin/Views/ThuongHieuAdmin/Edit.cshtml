@@ -60,18 +60,18 @@
             <tr>
                 <td style="width:18%">Mã thương hiệu</td>
                 <td><input style="width:700px; float:left;" type="text" name="MaThuongHieu" value="@Model.MaThuongHieu" readonly required></td>
-            </tr>
+                <td rowspan="5">
+                    <div>
+                        <img id="target" class="img" src="~/Assets/User/img/products/cosmetic/@Model.LogoTH" alt="your image  preview" style="float:right;width:200px;height:200px;"></img>
+                    </div>
+                </td>
             <tr>
                 <td colspan="2" style="height:10px"></td>
             </tr>
             <tr>
                 <td style="width:18%">Tên thương hiệu</td>
                 <td> <input style="width:700px; float:left;" type="text" name="TenThuongHieu" value="@Model.TenThuongHieu" placeholder="Tên thương hiệu..." required /></td>
-                <td rowspan="8">
-                    <div>
-                        <img id="target" class="img" src="~/Assets/User/img/products/cosmetic/@Model.LogoTH" alt="your image  preview" style="float:right;width:200px;height:200px;"></img>
-                    </div>
-                </td>
+                
             </tr>
             <tr>
                 <td colspan="2" style="height:10px"></td>

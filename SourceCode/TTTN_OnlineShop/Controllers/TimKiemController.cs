@@ -14,7 +14,15 @@ namespace TTTN_OnlineShop.Controllers
         public ActionResult Index(string timKiem, int page = 1, int pagesize = 12)
         {
             var db = TimKiemBUS.TimKiem(timKiem).ToPagedList(page, pagesize);
-            return View(db);
+            if (timKiem == "")
+            {
+                return RedirectToAction("../Shop/index"); ;
+            }
+            else
+            {
+                return View(db);
+            }   
+            
         }
     }
 }

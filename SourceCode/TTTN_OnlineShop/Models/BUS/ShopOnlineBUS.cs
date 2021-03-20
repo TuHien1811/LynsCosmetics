@@ -12,7 +12,7 @@ namespace TTTN_OnlineShop.Models.BUS
         public static IEnumerable<Table_SanPham> Danhsach() 
         {
             var db = new LynsCosmetics_ConnectionDB();
-            return db.Query<Table_SanPham>("select * from Table_SanPham where TinhTrang =1");
+            return db.Query<Table_SanPham>("select * from Table_SanPham where TinhTrang =1 ORDER BY NgayTao DESC");
         }
         public static Table_SanPham ChiTiet(int a)
         {

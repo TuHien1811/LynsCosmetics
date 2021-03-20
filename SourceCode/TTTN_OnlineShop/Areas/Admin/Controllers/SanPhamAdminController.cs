@@ -15,10 +15,20 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
     {
         [Authorize(Roles = "Admin")]
         // GET: Admin/SanPhamAdmin
-        public ActionResult Index(int page = 1, int pagesize = 10)
+        public ActionResult Index(string timKiem, int page = 1, int pagesize = 10)
         {
-            var ds =ShopOnlineBUS.DanhsachFull().ToPagedList(page,pagesize);
-            return View(ds);
+            var ds = ShopOnlineBUS.DanhsachFull().ToPagedList(page, pagesize);
+            if(timKiem == "")
+            {
+                return View(ds);
+            }
+            else if(timKiem !="")
+            {
+                var db = TimKiemBUS.TimKiem(timKiem).ToPagedList(page, pagesize);
+                return View(db);
+            }
+            return View(ShopOnlineBUS.DanhsachFull().ToPagedList(page, pagesize));
+
         }
 
         // GET: Admin/SanPhamAdmin/Details/5
@@ -84,6 +94,7 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
                 }
                 //sanPham.MaDanhMuc = 1;
                 //sanPham.MaThuongHieu = 1;
+                sanPham.NgayTao = DateTime.Now;
                 sanPham.LuotView = 0;
                 sanPham.SoLuongDaBan = 0;
                 ShopOnlineBUS.themSanPham(sanPham);
@@ -172,6 +183,7 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
                         sanPham.HinhNho3 = tam.HinhNho3;
                     }
                 }
+                sanPham.NgayTao = tam.NgayTao;
                 sanPham.SoLuongDaBan = tam.SoLuongDaBan;
                 sanPham.LuotView = tam.LuotView;
                 ShopOnlineBUS.suaSanPham(sanPham,id);

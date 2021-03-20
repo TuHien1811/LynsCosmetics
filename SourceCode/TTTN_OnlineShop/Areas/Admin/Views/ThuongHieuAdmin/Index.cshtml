@@ -42,6 +42,22 @@
 
     <table>
         <tr>
+            <th colspan="2">
+                <form class="navbar-search" action="@Url.Action("Index", "ThuongHieuAdmin")">
+                    <div class="input-group" style="margin:auto; margin-top: 15px">
+                        <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
+                               aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;" name="timKiem">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </th>
+            <th colspan="4"></th>
+        </tr>
+        <tr>
             <th>Mã thương hiệu</th>
             <th>Tên thương hiệu</th>
             <th>Logo</th>

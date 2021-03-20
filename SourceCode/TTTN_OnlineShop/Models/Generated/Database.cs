@@ -823,6 +823,12 @@ namespace LynsCosmetics_Connection
 
 
 
+
+
+		[Column] public DateTime? NgayTao { get; set; }
+
+
+
 	}
 
     

@@ -16,6 +16,15 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
         public ActionResult Index(int page = 1, int pagesize = 10)
         {
             var ds = DonHangBUS.dsDonHangFull().ToPagedList(page, pagesize);
+            //if (timKiem == "")
+            //{
+            //    return View(ds);
+            //}
+            //else if (timKiem != "")
+            //{
+            //    var db = TimKiemBUS.TimKiemDH(timKiem).ToPagedList(page, pagesize);
+            //    return View(db);
+            //}
             return View(ds);
         }
 

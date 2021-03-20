@@ -178,6 +178,7 @@
     <Compile Include="Areas\Admin\Controllers\DonHangAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SearchOrderAdController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThuongHieuAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\TinTucAdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -3024,6 +3025,7 @@
     <Content Include="Areas\Admin\Views\TinTucAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\TinTucAdmin\Create.cshtml" />
     <Content Include="Areas\Admin\Views\TinTucAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\SearchOrderAd\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
