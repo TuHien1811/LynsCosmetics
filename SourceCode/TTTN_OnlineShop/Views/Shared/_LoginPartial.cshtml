@@ -3,24 +3,22 @@
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-        @Html.AntiForgeryToken()
+@Html.AntiForgeryToken()
 
-        
-        <table style="width:auto">
-            <tr>
-                <td style="width:auto;text-align:center">@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })&nbsp;&nbsp;</td>
-                <td style="width:auto; text-align:center">|&nbsp;&nbsp;<a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></td>
-            </tr>
-        </table>
-    }
-}
-else
-{
-    
-    <table style="width:auto">
-        <tr>
-            <td style="width:auto;text-align:center">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })&nbsp;&nbsp;</td>
-            <td style="width:auto;text-align:center">|&nbsp;&nbsp;@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</td>
-        </tr>
-    </table>
-}
+
+                    <table style="width:auto">
+                        <tr>
+                            <td style="width:auto;text-align:center">@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })&nbsp;&nbsp;</td>
+                            <td style="width:auto; text-align:center">|&nbsp;&nbsp;<a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></td>
+                        </tr>
+                    </table> }
+                                }
+                                else
+                                {
+
+                    <table style="width:auto">
+                        <tr>
+                            <td style="width:auto;text-align:center">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })&nbsp;&nbsp;</td>
+                            <td style="width:auto;text-align:center">|&nbsp;&nbsp;@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</td>
+                        </tr>
+                    </table>}

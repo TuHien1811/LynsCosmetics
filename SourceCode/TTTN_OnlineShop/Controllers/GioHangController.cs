@@ -14,14 +14,14 @@ namespace TTTN_OnlineShop.Controllers
         public ActionResult Index()
         {
             ViewBag.TongTien = GioHangBUS.TongTien(User.Identity.GetUserId());
-            return View(GioHangBUS.DanhSach(User.Identity.GetUserId())); 
+            return View(GioHangBUS.DanhSach(User.Identity.GetUserId()));
         }
         [HttpPost]
         public ActionResult Them(int maSanPham, int soLuongMua, int giaBan, string tenSanPham, string hinhMinhHoa)
         {
             try
             {
-                GioHangBUS.ThemVaoGioHang(maSanPham, User.Identity.GetUserId(), soLuongMua, giaBan, tenSanPham,hinhMinhHoa);
+                GioHangBUS.ThemVaoGioHang(maSanPham, User.Identity.GetUserId(), soLuongMua, giaBan, tenSanPham, hinhMinhHoa);
                 return RedirectToAction("index");
             }
             catch

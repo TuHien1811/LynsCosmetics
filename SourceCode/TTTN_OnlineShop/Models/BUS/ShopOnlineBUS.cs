@@ -23,12 +23,14 @@ namespace TTTN_OnlineShop.Models.BUS
         public static IEnumerable<Table_SanPham> NewArrivalProducts()
         {
             var db = new LynsCosmetics_ConnectionDB();
-            return db.Query<Table_SanPham>("select * from Table_SanPham where GhiChu = N'new'");
+            return db.Query<Table_SanPham>("SELECT TOP 8 * FROM Table_SanPham WHERE NgayTao<GETDATE() ORDER BY NgayTao DESC");
+
+
         }
-        public static IEnumerable<Table_SanPham> RelatedProducts(int catogeryCode, int brandCode, int productCode)
+        public static IEnumerable<Table_SanPham> RelatedProducts(int catogeryCode,int productCode)
         {
             var db = new LynsCosmetics_ConnectionDB();
-            return db.Query<Table_SanPham>("select * from Table_SanPham where MaDanhMuc = " + catogeryCode + "and MaThuongHieu = " + brandCode+ "and MaSanPham != " +productCode);
+            return db.Query<Table_SanPham>("select * from Table_SanPham where MaDanhMuc = " + catogeryCode + "and MaSanPham != " +productCode);
         }
        
         //--------------------/Code Admin\------------------------------------------
@@ -51,6 +53,11 @@ namespace TTTN_OnlineShop.Models.BUS
         {
             var db = new LynsCosmetics_ConnectionDB();
             db.Execute("Delete from Table_SanPham where MaSanPham =@0", id);
+        }
+        public static void updatesoluongban(int sl, int id)
+        {
+            var db = new LynsCosmetics_ConnectionDB();
+            db.Execute("Update Table_SanPham set SoLuongDaBan = "+sl+" where MaSanPham = "+id);
         }
 
     }

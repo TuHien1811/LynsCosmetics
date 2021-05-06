@@ -11,10 +11,10 @@ namespace TTTN_OnlineShop.Models.BUS
     public class DonHangBUS
     {
         //---------------------------/Code User\-----------------------------------------------------
-        public static IEnumerable<Table_DonHang> dsDonHang( string idTaiKhoan)
+        public static IEnumerable<Table_DonHang> dsDonHang(string idTaiKhoan)
         {
             var db = new LynsCosmetics_ConnectionDB();
-            return db.Query<Table_DonHang>("select * from Table_DonHang where Id ='"+idTaiKhoan+"'");
+            return db.Query<Table_DonHang>("select * from Table_DonHang where Id ='" + idTaiKhoan + "'");
         }
         public static IEnumerable<Table_ChiTietDonHang> chiTiet(int maDonHang)
         {

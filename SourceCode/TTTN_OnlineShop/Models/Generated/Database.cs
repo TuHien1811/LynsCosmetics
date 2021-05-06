@@ -771,19 +771,19 @@ namespace LynsCosmetics_Connection
 
 
 
-		[Column] public int? SoLuongDaBan { get; set; }
+		[Column] public int SoLuongDaBan { get; set; }
 
 
 
 
 
-		[Column] public int? LuotView { get; set; }
+		[Column] public int LuotView { get; set; }
 
 
 
 
 
-		[Column] public string TinhTrang { get; set; }
+		[Column] public int TinhTrang { get; set; }
 
 
 
@@ -825,7 +825,7 @@ namespace LynsCosmetics_Connection
 
 
 
-		[Column] public DateTime? NgayTao { get; set; }
+		[Column] public DateTime NgayTao { get; set; }
 
 
 

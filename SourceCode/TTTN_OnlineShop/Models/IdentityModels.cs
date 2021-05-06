@@ -23,7 +23,6 @@ namespace TTTN_OnlineShop.Models
         public ApplicationDbContext()
             : base("LynsCosmetics_Connection", throwIfV1Schema: false)
         {
-
         }
 
         public static ApplicationDbContext Create()

@@ -45,11 +45,8 @@ namespace TTTN_OnlineShop.Controllers
                     chiTietDonHang.Gia = item.GiaBan;
                     //luu thong tin san pham vao chi tiet don hang
                     GioHangBUS.taoChiTietDH(chiTietDonHang);
-                    //int a = item.SoLuongMua;
-                    //Table_SanPham sanPham = new Table_SanPham();
-                    //sanPham.SoLuongDaBan = sanPham.SoLuongDaBan + a;
-                    ////Cap nhat so luong da ban trong bang san pham
-                    //ShopOnlineBUS.suaSanPham(sanPham,item.MaSanPham);
+                    //Update so luong san pham da ban
+                    ShopOnlineBUS.updatesoluongban(item.SoLuongMua, item.MaSanPham);
                 }
                 //Xoa thong tin san pham trong gio hang
                 GioHangBUS.XoaCartList(User.Identity.GetUserId());
@@ -61,7 +58,7 @@ namespace TTTN_OnlineShop.Controllers
             }
 
         }
-        
+
 
     }
 }

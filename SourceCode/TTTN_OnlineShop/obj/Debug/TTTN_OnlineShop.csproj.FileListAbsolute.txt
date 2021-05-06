@@ -106,118 +106,118 @@ D:\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CoreCompileInputs.cache
 D:\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CopyComplete
 D:\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.dll
 D:\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.pdb
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll.config
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\TTTN_OnlineShop.pdb
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\csc.exe
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\csc.exe.config
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\csc.rsp
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\csi.exe
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\csi.exe.config
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\csi.rsp
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.CSharp.Core.targets
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.Managed.Core.targets
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\Microsoft.Win32.Primitives.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.AppContext.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Collections.Immutable.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Console.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Diagnostics.StackTrace.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Globalization.Calendars.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.IO.Compression.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.IO.Compression.ZipFile.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.IO.FileSystem.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Net.Http.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Net.Sockets.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Reflection.Metadata.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Text.Encoding.CodePages.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.ValueTuple.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Xml.ReaderWriter.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Xml.XmlDocument.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Xml.XPath.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\System.Xml.XPath.XDocument.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\vbc.exe
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\vbc.exe.config
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\vbc.rsp
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\VBCSCompiler.exe
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\roslyn\VBCSCompiler.exe.config
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Antlr3.Runtime.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\EntityFramework.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\EntityFramework.SqlServer.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Core.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Owin.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Host.SystemWeb.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Cookies.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Facebook.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Google.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.OAuth.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Twitter.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Web.Infrastructure.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Newtonsoft.Json.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Owin.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.Helpers.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.Mvc.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.Optimization.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.Razor.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.WebPages.Deployment.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.WebPages.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.WebPages.Razor.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\WebGrease.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.Helpers.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.Mvc.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.Optimization.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.Razor.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.WebPages.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.WebPages.Deployment.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\System.Web.WebPages.Razor.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Newtonsoft.Json.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Antlr3.Runtime.pdb
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\EntityFramework.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\EntityFramework.SqlServer.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Core.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Owin.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Host.SystemWeb.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Facebook.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Cookies.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Google.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Twitter.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.Owin.Security.OAuth.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csprojAssemblyReference.cache
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CoreCompileInputs.cache
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CopyComplete
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.pdb
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\PagedList.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\PagedList.xml
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\PagedList.Mvc.dll
-E:\Học Tập\Năm 4(On)\Thực tập tốt nghiệp\TTTN_OnlineShop\bin\PagedList.Mvc.xml
+D:\Downloads\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csprojAssemblyReference.cache
+D:\Downloads\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CoreCompileInputs.cache
+D:\Downloads\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.dll
+D:\Downloads\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.pdb
+D:\Downloads\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll.config
+D:\Downloads\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll
+D:\Downloads\TTTN_OnlineShop\bin\TTTN_OnlineShop.pdb
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\csc.exe
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\csc.exe.config
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\csc.rsp
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\csi.exe
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\csi.exe.config
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\csi.rsp
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.AppContext.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Collections.Immutable.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Console.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Globalization.Calendars.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.IO.Compression.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.IO.FileSystem.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Net.Http.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Net.Sockets.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Reflection.Metadata.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.ValueTuple.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Xml.XPath.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\vbc.exe
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\vbc.exe.config
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\vbc.rsp
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\VBCSCompiler.exe
+D:\Downloads\TTTN_OnlineShop\bin\roslyn\VBCSCompiler.exe.config
+D:\Downloads\TTTN_OnlineShop\bin\Antlr3.Runtime.dll
+D:\Downloads\TTTN_OnlineShop\bin\EntityFramework.dll
+D:\Downloads\TTTN_OnlineShop\bin\EntityFramework.SqlServer.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Google.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Downloads\TTTN_OnlineShop\bin\Newtonsoft.Json.dll
+D:\Downloads\TTTN_OnlineShop\bin\Owin.dll
+D:\Downloads\TTTN_OnlineShop\bin\PagedList.dll
+D:\Downloads\TTTN_OnlineShop\bin\PagedList.Mvc.dll
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.Helpers.dll
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.Mvc.dll
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.Optimization.dll
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.Razor.dll
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.WebPages.Deployment.dll
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.WebPages.dll
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.WebPages.Razor.dll
+D:\Downloads\TTTN_OnlineShop\bin\WebGrease.dll
+D:\Downloads\TTTN_OnlineShop\bin\PagedList.xml
+D:\Downloads\TTTN_OnlineShop\bin\PagedList.Mvc.xml
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.Helpers.xml
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.Mvc.xml
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.Optimization.xml
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.Razor.xml
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.WebPages.xml
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.WebPages.Deployment.xml
+D:\Downloads\TTTN_OnlineShop\bin\System.Web.WebPages.Razor.xml
+D:\Downloads\TTTN_OnlineShop\bin\Newtonsoft.Json.xml
+D:\Downloads\TTTN_OnlineShop\bin\Antlr3.Runtime.pdb
+D:\Downloads\TTTN_OnlineShop\bin\EntityFramework.xml
+D:\Downloads\TTTN_OnlineShop\bin\EntityFramework.SqlServer.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Google.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Downloads\TTTN_OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Downloads\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CopyComplete
 C:\Users\shiro\OneDrive\Máy tính\Shop\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll.config
 C:\Users\shiro\OneDrive\Máy tính\Shop\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll
 C:\Users\shiro\OneDrive\Máy tính\Shop\LynsCosmetics\SourceCode\TTTN_OnlineShop\bin\TTTN_OnlineShop.pdb
@@ -330,115 +330,3 @@ C:\Users\shiro\OneDrive\Máy tính\Shop\LynsCosmetics\SourceCode\TTTN_OnlineShop
 C:\Users\shiro\OneDrive\Máy tính\Shop\LynsCosmetics\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CopyComplete
 C:\Users\shiro\OneDrive\Máy tính\Shop\LynsCosmetics\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.dll
 C:\Users\shiro\OneDrive\Máy tính\Shop\LynsCosmetics\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.pdb
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll.config
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\TTTN_OnlineShop.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\TTTN_OnlineShop.pdb
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\csc.exe
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\csc.exe.config
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\csc.rsp
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\csi.exe
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\csi.exe.config
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\csi.rsp
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.Managed.Core.targets
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\Microsoft.Win32.Primitives.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.AppContext.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Collections.Immutable.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Console.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Globalization.Calendars.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.IO.Compression.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.IO.Compression.ZipFile.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.IO.FileSystem.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Net.Http.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Net.Sockets.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Reflection.Metadata.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.Encoding.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.Primitives.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Text.Encoding.CodePages.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Threading.Tasks.Extensions.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.ValueTuple.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Xml.ReaderWriter.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Xml.XmlDocument.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Xml.XPath.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\System.Xml.XPath.XDocument.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\vbc.exe
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\vbc.exe.config
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\vbc.rsp
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\VBCSCompiler.exe
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\roslyn\VBCSCompiler.exe.config
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Antlr3.Runtime.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\EntityFramework.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\EntityFramework.SqlServer.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Core.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Cookies.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Facebook.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Google.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.OAuth.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Twitter.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Web.Infrastructure.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Newtonsoft.Json.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Owin.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\PagedList.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\PagedList.Mvc.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.Helpers.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.Mvc.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.Optimization.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.Razor.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.Deployment.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.Razor.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\WebGrease.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\PagedList.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\PagedList.Mvc.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.Helpers.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.Mvc.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.Optimization.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.Razor.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.Deployment.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\System.Web.WebPages.Razor.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Newtonsoft.Json.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Antlr3.Runtime.pdb
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\EntityFramework.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\EntityFramework.SqlServer.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Core.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Facebook.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Cookies.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Google.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.Twitter.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.Owin.Security.OAuth.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csprojAssemblyReference.cache
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CoreCompileInputs.cache
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.csproj.CopyComplete
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.dll
-D:\Downloads\LynsCosmetics-main\SourceCode\TTTN_OnlineShop\obj\Debug\TTTN_OnlineShop.pdb

@@ -77,7 +77,7 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
                 donHang.DiaChiGiaoHang = tamp.DiaChiGiaoHang;
                 donHang.ThanhTien = tamp.ThanhTien;
                 donHang.NgayTao = tamp.NgayTao;
-                DonHangBUS.suaDonHang(donHang,tamp.MaDonHang);
+                DonHangBUS.suaDonHang(donHang, tamp.MaDonHang);
                 return RedirectToAction("Index");
             }
             catch
@@ -108,6 +108,6 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
             }
         }
 
-        
+
     }
 }

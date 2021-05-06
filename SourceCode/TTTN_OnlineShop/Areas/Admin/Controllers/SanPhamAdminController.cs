@@ -92,15 +92,12 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
                         sanPham.HinhNho3 = fileName + ".jpg";
                     }
                 }
-                //sanPham.MaDanhMuc = 1;
-                //sanPham.MaThuongHieu = 1;
+
                 sanPham.NgayTao = DateTime.Now;
                 sanPham.LuotView = 0;
                 sanPham.SoLuongDaBan = 0;
                 ShopOnlineBUS.themSanPham(sanPham);
                 return RedirectToAction("Index");
-
-
             }
             catch
             {
@@ -183,6 +180,7 @@ namespace TTTN_OnlineShop.Areas.Admin.Controllers
                         sanPham.HinhNho3 = tam.HinhNho3;
                     }
                 }
+
                 sanPham.NgayTao = tam.NgayTao;
                 sanPham.SoLuongDaBan = tam.SoLuongDaBan;
                 sanPham.LuotView = tam.LuotView;

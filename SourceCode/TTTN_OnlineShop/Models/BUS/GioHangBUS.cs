@@ -20,7 +20,7 @@ namespace TTTN_OnlineShop.Models.BUS
                 {
                     // ham update so luong san pham
                     int a = (int)x.ElementAt(0).SoLuongMua + soLuongMua;
-                    CapNhatGioHang(maSanPham, idTaiKhoan, a, giaBan, tenSanPham,hinhMinhHoa);
+                    CapNhatGioHang(maSanPham, idTaiKhoan, a, giaBan, tenSanPham, hinhMinhHoa);
                 }
                 else
                 {
@@ -43,14 +43,14 @@ namespace TTTN_OnlineShop.Models.BUS
         {
             using (var db = new LynsCosmetics_ConnectionDB())
             {
-                return db.Query<Table_GioHang>("select * from Table_GioHang Where Id ='" + idTaiKhoan+"'");
+                return db.Query<Table_GioHang>("select * from Table_GioHang Where Id ='" + idTaiKhoan + "'");
             }
         }
         public static void CapNhatGioHang(int maSanPham, string idTaiKhoan, int soLuongMua, int giaBan, string tenSanPham, string hinhMinhHoa)
         {
             using (var db = new LynsCosmetics_ConnectionDB())
             {
-                
+
                 Table_GioHang giohang = new Table_GioHang()
                 {
                     MaSanPham = maSanPham,
@@ -104,7 +104,7 @@ namespace TTTN_OnlineShop.Models.BUS
             db.Insert(chiTietDonHang);
         }
 
-        
+
     }
 }
 
